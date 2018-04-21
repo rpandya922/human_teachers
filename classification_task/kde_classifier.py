@@ -35,3 +35,23 @@ class KDEClassifier():
         return np.array(probs)
     def predict(self, X):
         return self.classes_[np.argmax(self.predict_proba(X), 1)]
+
+class OneClassKDEClassifier():
+    def __init__(self, h):
+        self.h = h
+
+    def fit(self, X):
+        self.X = X
+        self.DOF = len(X[0])
+        return self
+
+    def predict(self, X):
+        def kernel(x):
+            DOF = len(x)
+            cov = np.diag(np.ones(DOF) * self.h)
+            likelihoods = mvn.pdf(self.X, mean=x, cov=cov)
+            return np.sum(likelihoods) / len(self.X)
+
+        cutoff = 0.1 / len(self.X) * mvn.pdf(np.zeros(self.DOF), mean=np.zeros(self.DOF), cov=np.diag(np.ones(self.DOF) * self.h))
+        probs = np.array([kernel(x) for x in X])
+        return np.array([0 if p <= cutoff else 1 for p in probs])
