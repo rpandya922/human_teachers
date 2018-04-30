@@ -33,6 +33,18 @@ class GridWorld():
             return (old_location, action, reward, self.agent_location), True
         return (old_location, action, reward, self.agent_location), False
 
+    def sim_transition(self, location, action):
+        if action == 'l':
+            new_location = (location[0], max(location[1] - 1, 0))
+        elif action == 'r':
+            new_location = (location[0], min(location[1] + 1, self.m - 1))
+        elif action == 'u':
+            new_location = (max(location[0] - 1, 0), location[1])
+        elif action == 'd':
+            new_location =(min(location[0] + 1, self.n - 1), location[1])
+        else:
+            print "Enter valid action [l, r, u, d]. "
+        return new_location
 
     def print_grid(self):
         grid_copy = np.copy(self.grid)
