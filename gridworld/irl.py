@@ -3,12 +3,29 @@ import numpy as np
 from collections import deque
 from grid import GridWorld
 import matplotlib.pyplot as plt
+from matplotlib import colors
+from utils import *
+##################################################################
+# CONSTANTS/FUNCTIONS
+# costs of colors [green, blue, yellow]
+costs = np.array([1, 2, 0])
+costs = costs / np.linalg.norm(costs)
+# number indicates color: (1: green, 2: blue, 3: yellow, 10: goal)
+grid = np.array(
+    [[0, 0, 3, 3,  0],
+     [0, 1, 1, 3,  0],
+     [0, 2, 1, 0,  0],
+     [0, 2, 1, 0,  0],
+     [0, 2, 2, 2,  0]
+    ])
+goal_location = (4, 4)
 
-def featurize(gridworld, trajectories):
+def featurize(grid, trajectories):
+    n, m = grid.shape
     green, blue, yellow = [], [], []
-    for i in range(gridworld.n):
-        for j in range(gridworld.m):
-            r = gridworld.grid[(i, j)]
+    for i in range(n):
+        for j in range(m):
+            r = grid[(i, j)]
             if r == 1:
                 green.append((i, j))
             elif r == 2:
@@ -28,14 +45,13 @@ def featurize(gridworld, trajectories):
                 features[2] += 1
         featurized.append(features[:])
     return np.array(featurized)
-
 def distance(state1, state2):
     return np.linalg.norm(np.subtract(state1, state2))
 # trajectory: [(s, a, s'), (s, a, s'), ...]
 def get_plausiable_trajectories(grid, start_loc, goal_loc):
     partial_traj_queue = deque([])
     all_trajectories = []
-    actions = ['l', 'r', 'u', 'd']
+    actions = ['w', 'a', 's', 'd']
     def help(traj):
         last_state = traj[-1][2]
         dist = distance(last_state, goal_loc)
@@ -60,64 +76,48 @@ def get_plausiable_trajectories(grid, start_loc, goal_loc):
         trajectory = partial_traj_queue.popleft()
         help(trajectory)
     return all_trajectories
+##################################################################
 
-# number indicates color: (1: green, 2: blue, 3: yellow, 10: goal)
-# number also indicates cost (1: least costly)
-grid = np.array(
-    [[0, 0, 3, 3,  0],
-     [0, 1, 1, 3,  0],
-     [0, 2, 1, 0, 10],
-     [0, 2, 1, 0,  0],
-     [0, 2, 2, 2,  0]
-    ])
-gridworld = GridWorld(grid)
+plot_cost_function(costs, grid, 'Ground Truth Cost')
 
-all_trajectories = get_plausiable_trajectories(gridworld, (0, 0), (2, 4))
+gridworld = GridWorld(grid, costs, goal_location, show_grid=False)
+all_trajectories = get_plausiable_trajectories(gridworld, (0, 0), goal_location)
 
 all_demonstrations = []
-for _ in range(2):
+for _ in range(1):
     grid = np.array(
     [[0, 0, 3, 3,  0],
      [0, 1, 1, 3,  0],
-     [0, 2, 1, 0, 10],
+     [0, 2, 1, 0,  0],
      [0, 2, 1, 0,  0],
      [0, 2, 2, 2,  0]
     ])
-    gridworld = GridWorld(grid)
+    gridworld = GridWorld(grid, costs, goal_location)
     trajectory = []
     goal_reached = False
     while not goal_reached:
-        gridworld.print_grid()
+        gridworld.plot_grid()
         a = raw_input("Enter next move: ")
-        while a not in ['l', 'r', 'u', 'd']:
+        while a not in ['w', 'a', 's', 'd']:
             a = raw_input("Enter next move: ")
         t, goal_reached = gridworld.transition(a)
         trajectory.append(t)
     all_demonstrations.append(trajectory)
-all_featurized = featurize(gridworld, all_trajectories)
-demo_features = featurize(gridworld, all_demonstrations)
+    gridworld.close_figure()
+all_featurized = featurize(gridworld.grid, all_trajectories)
+demo_features = featurize(gridworld.grid, all_demonstrations)
 
-w = np.zeros(3)
+w = np.ones(3) / 3
 alpha = 0.1
 for _ in range(100):
     optimal_features = all_featurized[np.argmin(all_featurized.dot(w.T))]
     w = w * (1 - alpha) - alpha * np.mean(demo_features - optimal_features, axis=0)
 learned_trajectory = all_trajectories[np.argmin(all_featurized.dot(w.T))]
+
+# if there is a negative weight, shift so min is at 0
+w = w - min(min(w), 0)
 print w
+plot_cost_function(w, grid, 'Learned Cost Function')
 
-for trajectory in all_demonstrations:
-    points = []
-    for t in trajectory:
-        points.append(t[0])
-    points.append(trajectory[-1][-1])
-    points = np.array(points)
-    plt.plot(points[:,0], points[:,1], c='b')
-
-points = []
-for t in learned_trajectory:
-    points.append(t[0])
-points.append(learned_trajectory[-1][-1])
-points = np.array(points)
-plt.plot(points[:,0], points[:,1], c='r')
-
+plot_demonstrations(all_demonstrations, grid, costs, goal_location)
 plt.show()
