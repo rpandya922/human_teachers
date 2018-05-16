@@ -1,0 +1,338 @@
+[2018-05-14 15:54:15 +0000] [13288] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 47, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 89, in <module>
+    init_db()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/db.py", line 37, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/schema.py", line 2848, in create_all
+    tables=tables)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1479, in _run_visitor
+    conn._run_visitor(visitorcallable, element, **kwargs)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1122, in _run_visitor
+    **kwargs).traverse_single(element)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/sql/visitors.py", line 122, in traverse_single
+    return meth(obj, **kw)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/ddl.py", line 70, in visit_metadata
+    self.traverse_single(table, create_ok=True)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/sql/visitors.py", line 122, in traverse_single
+    return meth(obj, **kw)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/ddl.py", line 89, in visit_table
+    self.connection.execute(schema.CreateTable(table))
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 662, in execute
+    params)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 720, in _execute_ddl
+    compiled
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 874, in _execute_context
+    context)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1024, in _handle_dbapi_exception
+    exc_info
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 196, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 867, in _execute_context
+    context)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 324, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) table turkdemo already exists u'\nCREATE TABLE turkdemo (\n\tuniqueid VARCHAR(128) NOT NULL, \n\tassignmentid VARCHAR(128) NOT NULL, \n\tworkerid VARCHAR(128) NOT NULL, \n\thitid VARCHAR(128) NOT NULL, \n\tipaddress VARCHAR(128), \n\tbrowser VARCHAR(128), \n\tplatform VARCHAR(128), \n\tlanguage VARCHAR(128), \n\tcond INTEGER, \n\tcounterbalance INTEGER, \n\tcodeversion VARCHAR(128), \n\tbeginhit DATETIME, \n\tbeginexp DATETIME, \n\tendhit DATETIME, \n\tbonus FLOAT, \n\tstatus INTEGER, \n\tmode VARCHAR(128), \n\tdatastring TEXT(4294967295), \n\tPRIMARY KEY (uniqueid)\n)\n\n' ()
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 47, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 89, in <module>
+    init_db()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/db.py", line 37, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/schema.py", line 2848, in create_all
+    tables=tables)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1479, in _run_visitor
+    conn._run_visitor(visitorcallable, element, **kwargs)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1122, in _run_visitor
+    **kwargs).traverse_single(element)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/sql/visitors.py", line 122, in traverse_single
+    return meth(obj, **kw)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/ddl.py", line 70, in visit_metadata
+    self.traverse_single(table, create_ok=True)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/sql/visitors.py", line 122, in traverse_single
+    return meth(obj, **kw)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/ddl.py", line 89, in visit_table
+    self.connection.execute(schema.CreateTable(table))
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 662, in execute
+    params)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 720, in _execute_ddl
+    compiled
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 874, in _execute_context
+    context)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1024, in _handle_dbapi_exception
+    exc_info
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 196, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 867, in _execute_context
+    context)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 324, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) table turkdemo already exists u'\nCREATE TABLE turkdemo (\n\tuniqueid VARCHAR(128) NOT NULL, \n\tassignmentid VARCHAR(128) NOT NULL, \n\tworkerid VARCHAR(128) NOT NULL, \n\thitid VARCHAR(128) NOT NULL, \n\tipaddress VARCHAR(128), \n\tbrowser VARCHAR(128), \n\tplatform VARCHAR(128), \n\tlanguage VARCHAR(128), \n\tcond INTEGER, \n\tcounterbalance INTEGER, \n\tcodeversion VARCHAR(128), \n\tbeginhit DATETIME, \n\tbeginexp DATETIME, \n\tendhit DATETIME, \n\tbonus FLOAT, \n\tstatus INTEGER, \n\tmode VARCHAR(128), \n\tdatastring TEXT(4294967295), \n\tPRIMARY KEY (uniqueid)\n)\n\n' ()
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23361)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23362)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23365)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23368)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23337)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23338)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23340)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23342)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23343)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23344)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23347)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23349)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23352)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23354)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23356)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23357)
+[2018-05-14 17:54:51 +0000] [23332] [CRITICAL] WORKER TIMEOUT (pid:23359)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24961)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24964)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24966)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24968)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24938)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24939)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24940)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24943)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24946)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24947)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24948)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24949)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24951)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24953)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24956)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24970)
+[2018-05-14 18:48:17 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:24959)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26048)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26049)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26051)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26053)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26055)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26056)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26057)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26059)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26063)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26064)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26032)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26033)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26036)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26037)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26039)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26040)
+[2018-05-14 21:29:06 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:26041)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30034)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30035)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30037)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30038)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30039)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30040)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30041)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30042)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30043)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30044)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30045)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30057)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30060)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30061)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30062)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30064)
+[2018-05-15 09:31:51 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:30065)
+[2018-05-15 10:05:20 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:1846)
+[2018-05-15 10:05:20 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:1848)
+[2018-05-15 10:05:20 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:1851)
+[2018-05-15 10:05:20 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:1853)
+[2018-05-15 10:05:20 +0000] [24933] [CRITICAL] WORKER TIMEOUT (pid:1870)
+[2018-05-15 10:28:06,379] ERROR in app: Exception on /exp [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/user_utils.py", line 20, in new_func
+    resp = make_response(func(*args, **kwargs))
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 439, in start_exp
+    db_session.commit()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 149, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 721, in commit
+    self.transaction.commit()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 354, in commit
+    self._prepare_impl()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 334, in _prepare_impl
+    self.session.flush()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1818, in flush
+    self._flush(objects)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1936, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 58, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1900, in _flush
+    flush_context.execute()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 372, in execute
+    rec.execute(self)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 525, in execute
+    uow
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 64, in save_obj
+    table, insert)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 541, in _emit_insert_statements
+    execute(statement, multiparams)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 662, in execute
+    params)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 874, in _execute_context
+    context)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1024, in _handle_dbapi_exception
+    exc_info
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 196, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 867, in _execute_context
+    context)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 324, in do_execute
+    cursor.execute(statement, parameters)
+IntegrityError: (IntegrityError) UNIQUE constraint failed: turkdemo.uniqueid u'INSERT INTO turkdemo (uniqueid, assignmentid, workerid, hitid, ipaddress, browser, platform, language, cond, counterbalance, codeversion, beginhit, beginexp, endhit, bonus, status, mode, datastring) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)' ('debug0T91Q7:debugE4SMH6', u'debugE4SMH6', u'debug0T91Q7', u'debug4W2QLG', '127.0.0.1', 'chrome', 'linux', 'UNKNOWN', 0, 0, '1.0', '2018-05-15 10:28:06.198120', None, None, 0.0, 1, u'debug', None)
+[2018-05-15 13:27:42 +0000] [9492] [ERROR] Connection in use: ('localhost', 22362)
+[2018-05-15 13:27:42 +0000] [9492] [ERROR] Retrying in 1 second.
+[2018-05-15 13:27:43 +0000] [9492] [ERROR] Connection in use: ('localhost', 22362)
+[2018-05-15 13:27:43 +0000] [9492] [ERROR] Retrying in 1 second.
+[2018-05-15 13:27:44 +0000] [9492] [ERROR] Connection in use: ('localhost', 22362)
+[2018-05-15 13:27:44 +0000] [9492] [ERROR] Retrying in 1 second.
+[2018-05-15 13:27:45 +0000] [9492] [ERROR] Connection in use: ('localhost', 22362)
+[2018-05-15 13:27:45 +0000] [9492] [ERROR] Retrying in 1 second.
+[2018-05-15 13:27:46 +0000] [9492] [ERROR] Connection in use: ('localhost', 22362)
+[2018-05-15 13:27:46 +0000] [9492] [ERROR] Retrying in 1 second.
+[2018-05-15 13:27:47 +0000] [9492] [ERROR] Can't connect to ('localhost', 22362)
+[2018-05-15 13:27:51,665] ERROR in app: Exception on /images/example_grid.png [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 726, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: images/example_grid.png
+[2018-05-15 13:28:11,357] ERROR in app: Exception on /example_grid.png [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: example_grid.png
+[2018-05-15 19:32:10 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7553)
+[2018-05-15 19:32:10 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7554)
+[2018-05-15 19:32:10 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7555)
+[2018-05-15 19:32:10 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7559)
+[2018-05-15 19:32:10 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7562)
+[2018-05-15 19:32:10 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7563)
+[2018-05-15 19:32:10 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7533)
+[2018-05-15 19:32:10 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7535)
+[2018-05-15 19:32:10 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7536)
+[2018-05-15 19:32:10 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7538)
+[2018-05-15 19:32:10 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7540)
+[2018-05-15 19:32:10 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7542)
+[2018-05-15 19:32:10 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7546)
+[2018-05-15 19:32:10 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7551)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7552)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:8376)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:8342)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:8343)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:8344)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:8351)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:8356)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:8380)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:8366)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:8368)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:8373)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7544)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:8377)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:8378)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:8379)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:7548)
+[2018-05-15 22:24:34 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:8381)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11908)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11910)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11911)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11913)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11916)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11920)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11922)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11923)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11886)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11926)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11929)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11884)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11890)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11894)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11895)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11902)
+[2018-05-16 09:10:32 +0000] [7528] [CRITICAL] WORKER TIMEOUT (pid:11925)

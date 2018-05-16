@@ -1,0 +1,44 @@
+<div id="container-instructions">
+
+	<h1>Instructions</h1>
+
+	<hr />
+
+	<div class="instructions well">
+
+	    <p>
+		    You will be showing another person where to navigate in a grid by providing demonstrations. The darker squares are very costly and you want to avoid them. The lighter squares are good, and you want to show the other person where they are through your demonstrations. The person learning from your demonstration will only see the path you take, not the color of the grid squares.
+	    </p>
+
+        <p>
+            You start at the blue square and can move in only 4 directions by clicking on the adjacent square you wish to move to. If you need to restart, click "Clear All". When your demonstration is done, click "Next" to move on to the next environment or "Finish" when done with all 3.
+        </p>
+
+        <img src="../../static/images/example_grid.png" style="width: 100%;">
+        <!-- insert picture of example grid --> 
+
+	    <script type="text/javascript">
+	    //console.log(psiTurk.getInstructionIndicator())
+	    </script>
+
+	</div>
+
+	<hr />
+
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+            	<!-- no previous button on first screen -->
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue">
+                Next <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
