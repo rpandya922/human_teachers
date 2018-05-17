@@ -79,9 +79,9 @@ h1 {
 /* custom */
 .grid-container {
   display: grid;
-  /*width: 700px;*/
-  height: 500px;
-  grid-template-columns: auto auto auto auto auto auto auto;
+  /*width: 700px;
+  height: 500px;*/
+  grid-template-columns: 8ch 8ch 8ch 8ch 8ch 8ch 8ch 8ch 8ch 8ch;
   background-color: white;
   padding: 10px;
 }

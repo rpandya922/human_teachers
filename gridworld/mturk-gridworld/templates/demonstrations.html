@@ -1,6 +1,6 @@
 <div id="container-exp">
     <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-12">
           <h2>Click on adjacent squares to add to the demonstration!</h2>
           <div class="grid-container">
               <div class="grid-item" id="square-0" onclick="connectPath(0)"></div>
@@ -45,12 +45,76 @@
               <div class="grid-item" id="square-39" onclick="connectPath(39)"></div>
               <div class="grid-item" id="square-40" onclick="connectPath(40)"></div>
               <div class="grid-item" id="square-41" onclick="connectPath(41)"></div>
+              <div class="grid-item" id="square-42" onclick="connectPath(42)"></div>
+              <div class="grid-item" id="square-43" onclick="connectPath(43)"></div>
+              <div class="grid-item" id="square-44" onclick="connectPath(44)"></div>
+              <div class="grid-item" id="square-45" onclick="connectPath(45)"></div>
+              <div class="grid-item" id="square-46" onclick="connectPath(46)"></div>
+              <div class="grid-item" id="square-47" onclick="connectPath(47)"></div>
+              <div class="grid-item" id="square-48" onclick="connectPath(48)"></div>
+              <div class="grid-item" id="square-49" onclick="connectPath(49)"></div>
+              <div class="grid-item" id="square-50" onclick="connectPath(50)"></div>
+              <div class="grid-item" id="square-51" onclick="connectPath(51)"></div>
+              <div class="grid-item" id="square-52" onclick="connectPath(52)"></div>
+              <div class="grid-item" id="square-53" onclick="connectPath(53)"></div>
+              <div class="grid-item" id="square-54" onclick="connectPath(54)"></div>
+              <div class="grid-item" id="square-55" onclick="connectPath(55)"></div>
+              <div class="grid-item" id="square-56" onclick="connectPath(56)"></div>
+              <div class="grid-item" id="square-57" onclick="connectPath(57)"></div>
+              <div class="grid-item" id="square-58" onclick="connectPath(58)"></div>
+              <div class="grid-item" id="square-59" onclick="connectPath(59)"></div>
+              <div class="grid-item" id="square-60" onclick="connectPath(60)"></div>
+              <div class="grid-item" id="square-61" onclick="connectPath(61)"></div>
+              <div class="grid-item" id="square-62" onclick="connectPath(62)"></div>
+              <div class="grid-item" id="square-63" onclick="connectPath(63)"></div>
+              <div class="grid-item" id="square-64" onclick="connectPath(64)"></div>
+              <div class="grid-item" id="square-65" onclick="connectPath(65)"></div>
+              <div class="grid-item" id="square-66" onclick="connectPath(66)"></div>
+              <div class="grid-item" id="square-67" onclick="connectPath(67)"></div>
+              <div class="grid-item" id="square-68" onclick="connectPath(68)"></div>
+              <div class="grid-item" id="square-69" onclick="connectPath(69)"></div>
+              <div class="grid-item" id="square-70" onclick="connectPath(70)"></div>
+              <div class="grid-item" id="square-71" onclick="connectPath(71)"></div>
+              <div class="grid-item" id="square-72" onclick="connectPath(72)"></div>
+              <div class="grid-item" id="square-73" onclick="connectPath(73)"></div>
+              <div class="grid-item" id="square-74" onclick="connectPath(74)"></div>
+              <div class="grid-item" id="square-75" onclick="connectPath(75)"></div>
+              <div class="grid-item" id="square-76" onclick="connectPath(76)"></div>
+              <div class="grid-item" id="square-77" onclick="connectPath(77)"></div>
+              <div class="grid-item" id="square-78" onclick="connectPath(78)"></div>
+              <div class="grid-item" id="square-79" onclick="connectPath(79)"></div>
+              <div class="grid-item" id="square-80" onclick="connectPath(80)"></div>
+              <div class="grid-item" id="square-81" onclick="connectPath(81)"></div>
+              <div class="grid-item" id="square-82" onclick="connectPath(82)"></div>
+              <div class="grid-item" id="square-83" onclick="connectPath(83)"></div>
+              <div class="grid-item" id="square-84" onclick="connectPath(84)"></div>
+              <div class="grid-item" id="square-85" onclick="connectPath(85)"></div>
+              <div class="grid-item" id="square-86" onclick="connectPath(86)"></div>
+              <div class="grid-item" id="square-87" onclick="connectPath(87)"></div>
+              <div class="grid-item" id="square-88" onclick="connectPath(88)"></div>
+              <div class="grid-item" id="square-89" onclick="connectPath(89)"></div>
+              <div class="grid-item" id="square-90" onclick="connectPath(90)"></div>
+              <div class="grid-item" id="square-91" onclick="connectPath(91)"></div>
+              <div class="grid-item" id="square-92" onclick="connectPath(92)"></div>
+              <div class="grid-item" id="square-93" onclick="connectPath(93)"></div>
+              <div class="grid-item" id="square-94" onclick="connectPath(94)"></div>
+              <div class="grid-item" id="square-95" onclick="connectPath(95)"></div>
+              <div class="grid-item" id="square-96" onclick="connectPath(96)"></div>
+              <div class="grid-item" id="square-97" onclick="connectPath(97)"></div>
+              <div class="grid-item" id="square-98" onclick="connectPath(98)"></div>
+              <div class="grid-item" id="square-99" onclick="connectPath(99)"></div>
           </div>
         </div>
     </div>
+    <button type="button" class="btn btn-primary" id="no-action" onclick="standStill()">Stand Still</button>
+    <div class="row">
+      <h1 style="display: inline">Score: </h1><h1 style="display: inline" id="score"></h1>
+      <p></p>
+      <h1 style="display: inline">Moves Left: </h1><h1 style="display: inline" id="moves-left"></h1>
+    </div>
     <div class="row">
       <button type="button" class="btn btn-primary" id="clear" onclick="clearAll()">Clear All</button>
-      <button type="button" class="btn btn-primary" id="next" onclick="next()">Next</button>
+      <button type="button" class="btn btn-primary disabled" id="next" onclick="next()">Next</button>
       <button type="button" class="btn btn-primary disabled" id="finish" onclick="finish()">Finish</button>
     </div>
 </div>

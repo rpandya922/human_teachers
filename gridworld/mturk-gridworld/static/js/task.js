@@ -38,33 +38,56 @@ function shuffle(a) {
 //           [0.6, 0.8, 0.6, 0.5, 0.5, 0.3, 0.5],
 //           [0.8, 1.0, 0.8, 0.5, 0.3, 0.0, 0.3],
 //           [0.6, 0.8, 0.6, 0.5, 0.5, 0.3, 0.5]];
+// old, hand-designed
+// colors1= [[0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
+//           [0.6, 1.0, 0.6, 0.5, 0.6, 1.0, 0.6],
+//           [0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
+//           [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5],
+//           [0.5, 0.5, 0.3, 0.0, 0.3, 0.5, 0.5],
+//           [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5]];
 
-colors1= [[0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
-          [0.6, 1.0, 0.6, 0.5, 0.6, 1.0, 0.6],
-          [0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
-          [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5],
-          [0.5, 0.5, 0.3, 0.0, 0.3, 0.5, 0.5],
-          [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5]];
+// colors2= [[0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
+//           [0.6, 1.0, 0.6, 0.5, 0.6, 0.8, 0.6],
+//           [0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
+//           [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5],
+//           [0.5, 0.5, 0.3, 0.0, 0.3, 0.5, 0.5],
+//           [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5]];
 
-colors2= [[0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
-          [0.6, 1.0, 0.6, 0.5, 0.6, 0.8, 0.6],
-          [0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
-          [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5],
-          [0.5, 0.5, 0.3, 0.0, 0.3, 0.5, 0.5],
-          [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5]];
+// colors3= [[0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
+//           [0.6, 0.8, 0.6, 0.5, 0.6, 1.0, 0.6],
+//           [0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
+//           [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5],
+//           [0.5, 0.5, 0.3, 0.0, 0.3, 0.5, 0.5],
+//           [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5]];
 
-colors3= [[0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
-          [0.6, 0.8, 0.6, 0.5, 0.6, 1.0, 0.6],
-          [0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
-          [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5],
-          [0.5, 0.5, 0.3, 0.0, 0.3, 0.5, 0.5],
-          [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5]];
+//new, rbf based
+colors2= [[ 0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5 ],
+          [ 0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5 ],
+          [ 0.5,   0.5,   0.51,  0.52,  0.51,  0.5,   0.51,  0.52,  0.51,  0.5 ],
+          [ 0.5,   0.51,  0.6,   0.72,  0.6,   0.52,  0.6,   0.72,  0.6,   0.51],
+          [ 0.5,   0.52,  0.72,  1.,    0.72,  0.52,  0.72,  1.,    0.72,  0.52],
+          [ 0.5,   0.51,  0.6,   0.72,  0.5,   0.29,  0.5,   0.72,  0.6,   0.51],
+          [ 0.5,   0.5,   0.51,  0.5,   0.28,  0.,    0.28,  0.5,   0.51,  0.5 ],
+          [ 0.5,   0.5,   0.5,   0.49,  0.4,   0.27,  0.4,   0.49,  0.5,   0.5 ],
+          [ 0.5,   0.5,   0.5,   0.5,   0.49,  0.48,  0.49,  0.5,   0.5,   0.5 ],
+          [ 0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5 ]]
+rewards= [[ 0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5 ],
+          [ 0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5 ],
+          [ 0.5,   0.5,   0.51,  0.52,  0.51,  0.5,   0.51,  0.52,  0.51,  0.5 ],
+          [ 0.5,   0.51,  0.6,   0.72,  0.6,   0.52,  0.6,   0.72,  0.6,   0.51],
+          [ 0.5,   0.52,  0.72,  1.,    0.72,  0.52,  0.72,  1.,    0.72,  0.52],
+          [ 0.5,   0.51,  0.6,   0.72,  0.5,   0.29,  0.5,   0.72,  0.6,   0.51],
+          [ 0.5,   0.5,   0.51,  0.5,   0.28,  0.,    0.28,  0.5,   0.51,  0.5 ],
+          [ 0.5,   0.5,   0.5,   0.49,  0.4,   0.27,  0.4,   0.49,  0.5,   0.5 ],
+          [ 0.5,   0.5,   0.5,   0.5,   0.49,  0.48,  0.49,  0.5,   0.5,   0.5 ],
+          [ 0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5 ]]
 
-grids = [colors1, colors2, colors3];
+grids = [colors2];
 shuffle(grids);
 
-var m = colors1.length; // grid height
-var n = colors1[0].length; // grid width
+var TOTAL_MOVES = 15; //arbitrary for now
+var m = colors2.length; // grid height
+var n = colors2[0].length; // grid width
 var indexToij = function(idx) {
     i = Math.floor(idx / m);
     j = idx % n;
@@ -106,7 +129,7 @@ var isNeighbor = function(idx1, idx2) {
 }
 
 var numToColor = function(grid) {
-    for (var i = 0; i < grid.length; i ++) {
+    for (var i = 0; i < grid.length; i++) {
         for (var j = 0; j < grid[0].length; j++) {
             val = grid[i][j];
             // default white
@@ -114,16 +137,20 @@ var numToColor = function(grid) {
             if (val == 0.0) {
                 // black
                 color = '#000000';
-            } else if (val == 0.3) {
+            } else if (val == 0.27 || val == 0.28 || val == 0.29 || val == 0.3) {
                 // dark gray
                 color = '#444447';
-            } else if (val == 0.5) {
+            } else if (val == 0.4) {
+                color = '#505050';
+            } else if (val == 0.48 || val == 0.49 || val == 0.5) {
                 // medium gray
                 color = '#888991';
+            } else if (val == 0.51 || val == 0.52) {
+                color = '#909090';
             } else if (val == 0.6) {
                 // light gray
                 color = '#b0b1b7';
-            } else if (val == 0.8) {
+            } else if (val == 0.7 || val == 0.72) {
                 //nearly white
                 color = '#d6d7d8'
             }
@@ -145,6 +172,9 @@ var numToColor = function(grid) {
 var Experiment = function() {
     psiTurk.showPage('demonstrations.html');
 
+    var reward = 0;
+    var moves_left = TOTAL_MOVES;
+    turns_finished = false;
     var grid_idx = 0;
     var colors;
 
@@ -158,8 +188,6 @@ var Experiment = function() {
             }
         }
     }
-
-    colorGridSquares();
 
     function createLineElement(x, y, length, angle) {
         var line = document.createElement("line");
@@ -194,9 +222,9 @@ var Experiment = function() {
         return createLineElement(x, y, c, alpha);
     }
 
-    path = [17];
+    path = [55];
 
-    prev_idx = 17;
+    prev_idx = 55;
     diameter = 20;
     var circle = document.createElement("circle");
     document.body.appendChild(circle);
@@ -208,8 +236,40 @@ var Experiment = function() {
     let [x, y] = indexToxy(prev_idx);
     circle.style.left = (x - diameter/2) + "px";
     circle.style.top = (y - diameter/2) + "px";
+
+    updateScore = function() {
+        d3.select("#score").text(reward.toFixed(2));
+    }
+
+    updateMoves = function() {
+        if (moves_left <= 0) {
+            turns_finished = true;
+            document.getElementById("next").classList.remove("disabled");
+            if (grid_idx == grids.length -1) {
+                document.getElementById("finish").classList.remove("disabled");
+            }
+        }
+        d3.select("#moves-left").text(moves_left);
+    }
+
+    resetScore = function() {
+        reward = 0;
+        updateScore();
+    }
+
+    resetMoves = function() {
+        moves_left = TOTAL_MOVES;
+        updateMoves();
+    }
+
+
     connectPath = function(idx) {
-        if (isNeighbor(prev_idx, idx)) {
+        if (isNeighbor(prev_idx, idx) && !turns_finished) {
+            let [i, j] = indexToij(idx);
+            reward += rewards[i][j];
+            moves_left -= 1;
+            updateMoves();
+            updateScore();
             path.push(idx);
             let [x, y] = indexToxy(idx);
             let [x1, y1] = indexToxy(prev_idx);
@@ -218,13 +278,29 @@ var Experiment = function() {
         }
     }
 
+    standStill = function() {
+        if (!turns_finished) {
+            let [i, j] = indexToij(prev_idx);
+            path.push(prev_idx);
+            reward += rewards[i][j];
+            moves_left -= 1;
+            updateMoves();
+            updateScore();
+        }
+    }
+
     clearAll = function() {
         var lines = document.getElementsByTagName("line");
         for (var i = 0, len = lines.length; i != len; ++i) {
             lines[0].parentNode.removeChild(lines[0]);
         }
-        prev_idx = 17;
-        path = [17];
+        prev_idx = 55;
+        path = [55];
+        turns_finished = false;
+        document.getElementById("next").classList.add("disabled");
+        document.getElementById("finish").classList.add("disabled");
+        resetMoves();
+        resetScore();
     };
 
     next = function() {
@@ -233,7 +309,7 @@ var Experiment = function() {
         clearAll();
         grid_idx += 1;
         colorGridSquares();
-        if (grid_idx == grids.length - 1) {
+        if (grid_idx == grids.length) {
             document.getElementById("finish").classList.remove("disabled");
             document.getElementById("next").classList.add("disabled");
         }
@@ -245,6 +321,10 @@ var Experiment = function() {
         psiTurk.saveData();
         psiTurk.completeHIT();
     }
+
+    colorGridSquares();
+    updateScore();
+    updateMoves();
 };
 
 // Task object to keep track of the current phase
