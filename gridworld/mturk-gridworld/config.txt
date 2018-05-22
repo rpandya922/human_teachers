@@ -1,5 +1,5 @@
 [HIT Configuration]
-title = Navigation Teaching (3 minutes)
+title = Navigation Teaching (5 minutes)
 description = Give demonstrations of how to navigate in a grid
 amt_keywords = human teaching, gridworld
 lifetime = 24
