@@ -611,6 +611,7 @@ var Experiment = function() {
     next = function() {
         psiTurk.recordUnstructuredData('grid_' + grid_idx, rewards);
         psiTurk.recordUnstructuredData('path_' + grid_idx, path);
+        psiTurk.recordUnstructuredData('reward_' + grid_idx, reward);
         clearAll();
         grid_idx += 1;
         colorGridSquares();
@@ -623,6 +624,7 @@ var Experiment = function() {
     finish = function() {
         psiTurk.recordUnstructuredData('grid_' + grid_idx, rewards);
         psiTurk.recordUnstructuredData('path_' + grid_idx, path);
+        psiTurk.recordUnstructuredData('reward_' + grid_idx, reward);
         psiTurk.saveData();
         psiTurk.completeHIT();
     }
