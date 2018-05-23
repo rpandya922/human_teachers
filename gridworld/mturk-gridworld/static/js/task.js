@@ -347,8 +347,8 @@ grids = [colors1, colors2, colors3, colors4, colors5, colors6, colors7, colors8,
 all_rewards = [rewards1, rewards2, rewards3, rewards4, rewards5, rewards6, rewards7, rewards8, rewards9];
 
 //Make sure color and reward are shuffled the same way
-// var shuffle_order = shuffle(_.range(grids.length));
-var shuffle_order = _.range(grids.length)  // TODO: change back to actual shuffle for experiments
+var shuffle_order = shuffle(_.range(grids.length));
+// var shuffle_order = _.range(grids.length)  // TODO: change back to actual shuffle for experiments
 grids = match_shuffle(grids, shuffle_order);
 all_rewards = match_shuffle(all_rewards, shuffle_order);
 
