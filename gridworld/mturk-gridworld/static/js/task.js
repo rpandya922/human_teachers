@@ -28,6 +28,7 @@ var instructionPages = [ // add as a list as many pages as you like
     "instructions/instruct-3.html"
 ];
 
+// orders a according to order
 function match_shuffle(a, order) {
     var ret = [];
     for (i = 0; i < order.length; i++) {
@@ -671,9 +672,10 @@ var Practice = function() {
             document.getElementById("next").classList.add("disabled");
         } else {
             alert("In the next scenario, imagine someone observes where you move but " + 
-                  "cannot see the colors on the grid. How would you show them how to get " +
-                  "the highest score?");
-            d3.select("#instructions").text("Show someone how to get a high score");
+                  "does not know how good each color is. How would you show them how to get " +
+                  "a high score?");
+            d3.select("#instructions").text("Show someone who doesn't know how much colors are worth " + 
+                                            "how to get a high score");
         }
     }
 
@@ -683,7 +685,7 @@ var Practice = function() {
         psiTurk.recordUnstructuredData('practice_reward_' + grid_idx, reward);
         currentview = new Experiment();
         alert("Next, you will see " + String(grids.length) + " different scenarios. Again imagine " +
-              "someone observes where you move but cannot see the colors on the grid. Move in a way " +
+              "someone observes where you move but does not know how good each color is. Move in a way " +
               "that would show them how to get a high score.");
     }
 
