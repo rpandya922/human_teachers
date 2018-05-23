@@ -352,7 +352,7 @@ var shuffle_order = shuffle(_.range(grids.length));
 grids = match_shuffle(grids, shuffle_order);
 all_rewards = match_shuffle(all_rewards, shuffle_order);
 
-var TOTAL_MOVES = 25; //arbitrary for now
+var TOTAL_MOVES = 50; //arbitrary for now
 var m = grids[0].length; // grid height
 var n = grids[0][0].length; // grid width
 var indexToij = function(idx) {
