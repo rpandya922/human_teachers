@@ -10,7 +10,8 @@ ad_group = Human Navigation Task
 psiturk_keywords = human teaching
 organization_name = UC Berkeley
 browser_exclude_rule = MSIE, mobile, tablet
-allow_repeats = false
+# only for sandbox, change to false for live experiments
+allow_repeats = true 
 
 [Database Parameters]
 database_url = sqlite:///participants.db
