@@ -1,25 +1,30 @@
 <div id="container-instructions">
 
-    <h1>Instructions</h1>
+	<h1>Instructions</h1>
 
-    <hr />
+	<hr />
 
-    <div class="instructions well">
+	<div class="instructions well">
+	    <p>
+		    You want to <b>get the highest score before getting to the goal.</b>
+	    </p>
 
         <p>
-            Below is an example environment. In this example, the user has made 2 moves and has 23 moves left to reach the goal, marked in red. The white squares give a score of 1, black squares give -1, and the gray squares give 0. In future environments, different shades of gray will give different reward. <b>The darker shades will give negative scores while lighter shades will give positive scores.</b>
+            The goal is the red square.
         </p>
 
-        <img src="../../static/images/gridworld_example.png" style="width: 100%;">
+        <p>
+            Here, walking on white gives +1, light gray gives +0.5, dark gray gives -0.5, and black gives -1 points.
+        </p>
 
+        <img src="../../static/images/gridworld_example.png" style="width: 80ch;">
+	    <script type="text/javascript">
+	    //console.log(psiTurk.getInstructionIndicator())
+	    </script>
 
-        <script type="text/javascript">
-        //console.log(psiTurk.getInstructionIndicator())
-        </script>
+	</div>
 
-    </div>
-
-    <hr />
+	<hr />
 
     <div class="instructionsnav">
         <div class="row">
@@ -37,5 +42,4 @@
             </div>
         </div>
     </div>
-
 </div>

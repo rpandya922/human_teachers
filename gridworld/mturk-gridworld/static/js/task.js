@@ -15,6 +15,8 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 var pages = [
     "instructions/instruct-1.html",
     "instructions/instruct-2.html",
+    "instructions/instruct-3.html",
+    "practice.html",
     "demonstrations.html"
 ];
 
@@ -22,7 +24,8 @@ psiTurk.preloadPages(pages);
 
 var instructionPages = [ // add as a list as many pages as you like
     "instructions/instruct-1.html",
-    "instructions/instruct-2.html"
+    "instructions/instruct-2.html",
+    "instructions/instruct-3.html"
 ];
 
 function match_shuffle(a, order) {
@@ -343,6 +346,52 @@ rewards9= [[ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
            [ 0. ,  0. ,  0. ,  0. , -1. , -1. , -1. ,  0. ,  0. ,  0. ],
            [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ]];
 
+// currently both practice scenarios are the same
+practice_colors1 = [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
+practice_rewards1= [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
+
+practice_colors2 = [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
+practice_rewards2= [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
+
+practice_grids = [practice_colors1, practice_colors2];
+practice_rewards = [practice_rewards1, practice_rewards2];
+
 grids = [colors1, colors2, colors3, colors4, colors5, colors6, colors7, colors8, colors9];
 all_rewards = [rewards1, rewards2, rewards3, rewards4, rewards5, rewards6, rewards7, rewards8, rewards9];
 
@@ -457,6 +506,9 @@ var numToColor = function(grid) {
             if (ijToIndex(i, j) == goal_loc) {
                 // red goal
                 color = "#ff0000";
+            } else if (ijToIndex(i, j) == start_loc) {
+                // blue start
+                color = "#0000ff";
             }
             grid[i][j] = color;
         }
@@ -473,11 +525,178 @@ var numToColor = function(grid) {
 *
 ********************/
 
+var Practice = function() {
+    psiTurk.showPage('practice.html');
+
+    var reward = 0.0;
+    var moves_made = 0;
+    var turns_finished = false;
+    var goal_reached = false;
+    var grid_idx = 0;
+    var colors;
+    var rewards;
+
+    function colorGridSquares() {
+        colors = practice_grids[grid_idx];
+        rewards = practice_rewards[grid_idx];
+        numToColor(colors);
+        for (var i = 0; i < colors.length; i++) {
+            for (var j = 0; j < colors[0].length; j++) {
+                square = document.getElementById("square-" + ijToIndex(i, j));
+                square.setAttribute('style', 'background-color: ' + colors[i][j] + ';');
+            }
+        }
+    }
+
+    function createLineElement(x, y, length, angle) {
+        var line = document.createElement("line");
+        var styles = 'border: 1px solid blue; '
+                   + 'width: ' + length + 'px; '
+                   + 'height: 0px; '
+                   + '-moz-transform: rotate(' + angle + 'rad); '
+                   + '-webkit-transform: rotate(' + angle + 'rad); '
+                   + '-o-transform: rotate(' + angle + 'rad); '  
+                   + '-ms-transform: rotate(' + angle + 'rad); '  
+                   + 'position: absolute; '
+                   + 'top: ' + y + 'px; '
+                   + 'left: ' + x + 'px; ';
+        line.setAttribute('style', styles);
+        line.setAttribute('name', 'line');  
+        return line;
+    }
+
+    function createLine(x1, y1, x2, y2) {
+        var a = x1 - x2,
+            b = y1 - y2,
+            c = Math.sqrt(a * a + b * b);
+
+        var sx = (x1 + x2) / 2,
+            sy = (y1 + y2) / 2;
+
+        var x = sx - c / 2,
+            y = sy;
+
+        var alpha = Math.PI - Math.atan2(-b, a);
+
+        return createLineElement(x, y, c, alpha);
+    }
+
+    path = [start_loc];
+    prev_idx = start_loc;
+
+    updateScore = function() {
+        d3.select("#score").text(reward.toFixed(2));
+    }
+
+    updateMoves = function() {
+        d3.select("#moves-made").text(moves_made);
+        return true;
+    }
+
+    resetScore = function() {
+        reward = 0.0;
+        updateScore();
+    }
+
+    resetMoves = function() {
+        moves_made = 0;
+        updateMoves();
+    }
+
+    goalReached = function() {
+        goal_reached = true;
+        if (grid_idx == practice_grids.length -1) {
+            alert("You've reached the goal! Click 'Finish Practice' to continue or 'Clear All' to retry this scenario.");
+            document.getElementById("finish").classList.remove("disabled");
+        } else {
+            alert("You've reached the goal! Click 'Next' to continue or 'Clear All' to retry this scenario.");
+            document.getElementById("next").classList.remove("disabled");
+        }
+    }
+
+    connectPath = function(idx) {
+        if (isNeighbor(prev_idx, idx) && !turns_finished && !goal_reached) {
+            if (idx == goal_loc) {
+                goalReached();
+            }
+            let [i, j] = indexToij(idx);
+            reward += rewards[i][j];
+            moves_made += 1;
+            if (updateMoves()) {
+                updateScore();
+                path.push(idx);
+                let [x, y] = indexToxy(idx);
+                let [x1, y1] = indexToxy(prev_idx);
+                document.body.appendChild(createLine(x, y, x1, y1));
+                prev_idx = idx;
+            }
+        }
+    }
+
+    standStill = function() {
+        if (!turns_finished) {
+            let [i, j] = indexToij(prev_idx);
+            path.push(prev_idx);
+            reward += rewards[i][j];
+            moves_made += 1;
+            updateMoves();
+            updateScore();
+        }
+    }
+
+    clearAll = function() {
+        var lines = document.getElementsByTagName("line");
+        for (var i = 0, len = lines.length; i != len; ++i) {
+            lines[0].parentNode.removeChild(lines[0]);
+        }
+        prev_idx = start_loc;
+        path = [start_loc];
+        turns_finished = false;
+        goal_reached = false;
+        document.getElementById("next").classList.add("disabled");
+        document.getElementById("finish").classList.add("disabled");
+        resetMoves();
+        resetScore();
+    };
+
+    next = function() {
+        psiTurk.recordUnstructuredData('grid_' + grid_idx, rewards);
+        psiTurk.recordUnstructuredData('path_' + grid_idx, path);
+        psiTurk.recordUnstructuredData('reward_' + grid_idx, reward);
+        clearAll();
+        grid_idx += 1;
+        colorGridSquares();
+        if (grid_idx == practice_grids.length) {
+            document.getElementById("finish").classList.remove("disabled");
+            document.getElementById("next").classList.add("disabled");
+        } else {
+            alert("In the next scenario, imagine someone observes where you move but " + 
+                  "cannot see the colors on the grid. How would you show them how to get " +
+                  "the highest score?");
+            d3.select("#instructions").text("Show someone how to get a high score");
+        }
+    }
+
+    finish = function() {
+        psiTurk.recordUnstructuredData('practice_grid_' + grid_idx, rewards);
+        psiTurk.recordUnstructuredData('practice_path_' + grid_idx, path);
+        psiTurk.recordUnstructuredData('practice_reward_' + grid_idx, reward);
+        currentview = new Experiment();
+        alert("Next, you will see " + String(grids.length) + " different scenarios. Again imagine " +
+              "someone observes where you move but cannot see the colors on the grid. Move in a way " +
+              "that would show them how to get a high score.");
+    }
+
+    colorGridSquares();
+    updateScore();
+    updateMoves();
+}
+
 var Experiment = function() {
     psiTurk.showPage('demonstrations.html');
 
     var reward = 0.0;
-    var moves_left = TOTAL_MOVES;
+    var moves_made = 0;
     var turns_finished = false;
     var goal_reached = false;
     var grid_idx = 0;
@@ -530,40 +749,28 @@ var Experiment = function() {
     }
 
     path = [start_loc];
-
     prev_idx = start_loc;
-    diameter = 20;
-    var circle = document.createElement("circle");
-    document.body.appendChild(circle);
-    circle.classList.add("circle");
-    circle.style.height = diameter + "px";
-    circle.style.width = diameter + "px";
-    circle.style.background = "blue";
-    circle.style.position = "absolute";
-    let [x, y] = indexToxy(prev_idx);
-    circle.style.left = (x - diameter/2) + "px";
-    circle.style.top = (y - diameter/2) + "px";
 
     updateScore = function() {
         d3.select("#score").text(reward.toFixed(2));
     }
 
     updateMoves = function() {
-        if (moves_left <= 0 && !goal_reached) {
-            alert("You need to reach the goal within " + String(TOTAL_MOVES) + " turns! Click 'Ok' to restart.");
-            clearAll();
-            // need to signal to conectPath not to actually add idx to path
-            return false;
-        }
-        if (moves_left <= 0) {
-            turns_finished = true;
-            if (grid_idx == grids.length -1) {
-                document.getElementById("finish").classList.remove("disabled");
-            } else {
-                document.getElementById("next").classList.remove("disabled");
-            }
-        }
-        d3.select("#moves-left").text(moves_left);
+        // if (moves_left <= 0 && !goal_reached) {
+        //     alert("You need to reach the goal within " + String(TOTAL_MOVES) + " turns! Click 'Ok' to restart.");
+        //     clearAll();
+        //     // need to signal to conectPath not to actually add idx to path
+        //     return false;
+        // }
+        // if (moves_left <= 0) {
+        //     turns_finished = true;
+        //     if (grid_idx == grids.length -1) {
+        //         document.getElementById("finish").classList.remove("disabled");
+        //     } else {
+        //         document.getElementById("next").classList.remove("disabled");
+        //     }
+        // }
+        d3.select("#moves-made").text(moves_made);
         return true;
     }
 
@@ -573,15 +780,17 @@ var Experiment = function() {
     }
 
     resetMoves = function() {
-        moves_left = TOTAL_MOVES;
+        moves_made = 0;
         updateMoves();
     }
 
     goalReached = function() {
         goal_reached = true;
         if (grid_idx == grids.length -1) {
+            alert("You've reached the goal! Click 'Finish' to finish the HIT or 'Clear All' to retry this scenario.");
             document.getElementById("finish").classList.remove("disabled");
         } else {
+            alert("You've reached the goal! Click 'Next' to continue or 'Clear All' to retry this scenario.");
             document.getElementById("next").classList.remove("disabled");
         }
     }
@@ -593,7 +802,7 @@ var Experiment = function() {
             }
             let [i, j] = indexToij(idx);
             reward += rewards[i][j];
-            moves_left -= 1;
+            moves_made += 1;
             if (updateMoves()) {
                 updateScore();
                 path.push(idx);
@@ -610,7 +819,7 @@ var Experiment = function() {
             let [i, j] = indexToij(prev_idx);
             path.push(prev_idx);
             reward += rewards[i][j];
-            moves_left -= 1;
+            moves_made += 1;
             updateMoves();
             updateScore();
         }
@@ -666,6 +875,6 @@ var currentview;
 $(window).load( function(){
     psiTurk.doInstructions(
         instructionPages, // a list of pages you want to display in sequence
-        function() { currentview = new Experiment(); } // what you want to do when you are done with instructions
+        function() { currentview = new Practice(); } // what you want to do when you are done with instructions
     );
 });

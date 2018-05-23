@@ -1,31 +1,33 @@
 <div id="container-instructions">
 
-	<h1>Instructions</h1>
+    <h1>Instructions</h1>
 
-	<hr />
+    <hr />
 
-	<div class="instructions well">
-
-	    <p>
-		    You will be showing another person where to navigate in a grid by providing demonstrations. You want to show them how to <b>get the highest score within 50 steps before getting to the goal.</b> The goal will be marked in red. The darker squares will give a negative score while lighter squares give positive scores. 
-	    </p>
+    <div class="instructions well">
+        <p>
+            You will be moving in a grid.
+        </p>
 
         <p>
-            You start at the blue square and can move in only 4 directions by clicking on the adjacent square you wish to move to. You can also choose not to move but still collect a reward for a particular step if you wish by clicking the 'Stand Still' button. If you need to restart, click "Clear All". When your demonstration is done, click "Next" to move on to the next environment or "Finish" when done with all 9.
+            You start at the blue square and can move in only 4 directions (up, down, left, right) by clicking on neighboring squares. You can also choose not to move for a step by clicking 'Stand Still'.
         </p>
-	    <script type="text/javascript">
-	    //console.log(psiTurk.getInstructionIndicator())
-	    </script>
 
-	</div>
+        <img src="../../static/images/movement_example.png" style="width: 80ch;">
 
-	<hr />
 
+        <script type="text/javascript">
+        //console.log(psiTurk.getInstructionIndicator())
+        </script>
+
+    </div>
+
+    <hr />
 
     <div class="instructionsnav">
         <div class="row">
             <div class="col-xs-2">
-            	<!-- no previous button on first screen -->
+                <!-- no previous button on first screen -->
             </div>
             <div class="col-xs-8">
             </div>
@@ -36,5 +38,4 @@
             </div>
         </div>
     </div>
-
 </div>
