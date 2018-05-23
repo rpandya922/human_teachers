@@ -398,7 +398,7 @@ all_rewards = [rewards1, rewards2, rewards3, rewards4, rewards5, rewards6, rewar
 
 //Make sure color and reward are shuffled the same way
 var shuffle_order = shuffle(_.range(grids.length));
-// var shuffle_order = _.range(grids.length)  // TODO: change back to actual shuffle for experiments
+// var shuffle_order = _.range(grids.length) 
 grids = match_shuffle(grids, shuffle_order);
 all_rewards = match_shuffle(all_rewards, shuffle_order);
 
@@ -672,7 +672,7 @@ var Practice = function() {
             document.getElementById("next").classList.add("disabled");
         } else {
             alert("In the next scenario, imagine someone observes where you move but " + 
-                  "does not know how good each color is. How would you show them how to get " +
+                  "does not know how much each color is worth. How would you show them how to get " +
                   "a high score?");
             d3.select("#instructions").text("Show someone who doesn't know how much colors are worth " + 
                                             "how to get a high score");
@@ -685,7 +685,7 @@ var Practice = function() {
         psiTurk.recordUnstructuredData('practice_reward_' + grid_idx, reward);
         currentview = new Experiment();
         alert("Next, you will see " + String(grids.length) + " different scenarios. Again imagine " +
-              "someone observes where you move but does not know how good each color is. Move in a way " +
+              "someone observes where you move but does not know how much each color is worth. Move in a way " +
               "that would show them how to get a high score.");
     }
 

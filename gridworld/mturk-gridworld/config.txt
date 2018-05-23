@@ -1,5 +1,5 @@
 [HIT Configuration]
-title = Navigation Teaching (5 minutes)
+title = Navigation Teaching (10 minutes)
 description = Give demonstrations of how to navigate in a grid
 amt_keywords = human teaching, gridworld
 lifetime = 24
@@ -10,7 +10,6 @@ ad_group = Human Navigation Task
 psiturk_keywords = human teaching
 organization_name = UC Berkeley
 browser_exclude_rule = MSIE, mobile, tablet
-# only for sandbox, change to false for live experiments
 allow_repeats = true 
 
 [Database Parameters]
