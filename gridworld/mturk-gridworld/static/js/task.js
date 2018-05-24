@@ -589,7 +589,7 @@ var Practice = function() {
     }
 
     updateMoves = function() {
-        d3.select("#moves-made").text(moves_made);
+        // d3.select("#moves-made").text(moves_made);
         return true;
     }
 
@@ -764,7 +764,7 @@ var Experiment = function() {
     }
 
     updateMoves = function() {
-        d3.select("#moves-made").text(moves_made);
+        // d3.select("#moves-made").text(moves_made);
         return true;
     }
 
