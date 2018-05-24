@@ -15,7 +15,6 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 var pages = [
     "instructions/instruct-1.html",
     "instructions/instruct-2.html",
-    "instructions/instruct-3.html",
     "practice.html",
     "demonstrations.html"
 ];
@@ -24,8 +23,7 @@ psiTurk.preloadPages(pages);
 
 var instructionPages = [ // add as a list as many pages as you like
     "instructions/instruct-1.html",
-    "instructions/instruct-2.html",
-    "instructions/instruct-3.html"
+    "instructions/instruct-2.html"
 ];
 
 // orders a according to order
@@ -348,45 +346,45 @@ rewards9= [[ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
            [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ]];
 
 // currently both practice scenarios are the same
-practice_colors1 = [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+practice_colors1 = [[ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
-practice_rewards1= [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+practice_rewards1= [[ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
 
-practice_colors2 = [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+practice_colors2 = [[ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
-practice_rewards2= [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+practice_rewards2= [[ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0., -1., -1.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
 
@@ -672,10 +670,14 @@ var Practice = function() {
             document.getElementById("next").classList.add("disabled");
         } else {
             alert("In the next scenario, imagine someone observes where you move but " + 
-                  "does not know how much each color is worth. How would you show them how to get " +
-                  "a high score?");
+                  "does not know how much each color is worth.  How might you move so "+ 
+                  "that it becomes as clear to them as possible what value each type of " + 
+                  "square has? You want to teach another person what these values are so " + 
+                  "that they could do the task in a new environment, where the squares " + 
+                  "might be arranged differently.");
             d3.select("#instructions").text("Show someone who doesn't know how much colors are worth " + 
-                                            "how to get a high score");
+                                            "that white squares give high scores and black squares give " + 
+                                            "low scores.");
         }
     }
 
@@ -686,7 +688,10 @@ var Practice = function() {
         currentview = new Experiment();
         alert("Next, you will see " + String(grids.length) + " different scenarios. Again imagine " +
               "someone observes where you move but does not know how much each color is worth. Move in a way " +
-              "that would show them how to get a high score.");
+              "that it becomes as clear to them as possible what value each type of " + 
+              "square has. You want to teach another person what these values are so " + 
+              "that they could do the task in a new environment, where the squares " + 
+              "might be arranged differently.");
     }
 
     colorGridSquares();
@@ -758,20 +763,6 @@ var Experiment = function() {
     }
 
     updateMoves = function() {
-        // if (moves_left <= 0 && !goal_reached) {
-        //     alert("You need to reach the goal within " + String(TOTAL_MOVES) + " turns! Click 'Ok' to restart.");
-        //     clearAll();
-        //     // need to signal to conectPath not to actually add idx to path
-        //     return false;
-        // }
-        // if (moves_left <= 0) {
-        //     turns_finished = true;
-        //     if (grid_idx == grids.length -1) {
-        //         document.getElementById("finish").classList.remove("disabled");
-        //     } else {
-        //         document.getElementById("next").classList.remove("disabled");
-        //     }
-        // }
         d3.select("#moves-made").text(moves_made);
         return true;
     }
@@ -843,6 +834,8 @@ var Experiment = function() {
     };
 
     next = function() {
+        var strategy = prompt("Describe your strategy for teaching the value of the colors in this scenario.");
+        psiTurk.recordUnstructuredData('strategy_' + grid_idx, strategy);
         psiTurk.recordUnstructuredData('grid_' + grid_idx, rewards);
         psiTurk.recordUnstructuredData('path_' + grid_idx, path);
         psiTurk.recordUnstructuredData('reward_' + grid_idx, reward);
@@ -856,6 +849,8 @@ var Experiment = function() {
     }
 
     finish = function() {
+        var strategy = prompt("Describe your strategy for teaching the value of the colors in this scenario.");
+        psiTurk.recordUnstructuredData('strategy_' + grid_idx, strategy);
         psiTurk.recordUnstructuredData('grid_' + grid_idx, rewards);
         psiTurk.recordUnstructuredData('path_' + grid_idx, path);
         psiTurk.recordUnstructuredData('reward_' + grid_idx, reward);
