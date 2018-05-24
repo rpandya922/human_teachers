@@ -16,7 +16,8 @@ var pages = [
     "instructions/instruct-1.html",
     "instructions/instruct-2.html",
     "practice.html",
-    "demonstrations.html"
+    "demonstrations.html",
+    "postquestionnaire.html"
 ];
 
 psiTurk.preloadPages(pages);
@@ -659,9 +660,9 @@ var Practice = function() {
     };
 
     next = function() {
-        psiTurk.recordUnstructuredData('grid_' + grid_idx, rewards);
-        psiTurk.recordUnstructuredData('path_' + grid_idx, path);
-        psiTurk.recordUnstructuredData('reward_' + grid_idx, reward);
+        psiTurk.recordUnstructuredData('practice_grid_' + grid_idx, rewards);
+        psiTurk.recordUnstructuredData('practice_path_' + grid_idx, path);
+        psiTurk.recordUnstructuredData('practice_reward_' + grid_idx, reward);
         clearAll();
         grid_idx += 1;
         colorGridSquares();
@@ -854,14 +855,24 @@ var Experiment = function() {
         psiTurk.recordUnstructuredData('grid_' + grid_idx, rewards);
         psiTurk.recordUnstructuredData('path_' + grid_idx, path);
         psiTurk.recordUnstructuredData('reward_' + grid_idx, reward);
-        psiTurk.saveData();
-        psiTurk.completeHIT();
+        currentview = new Questionnaire();
     }
 
     colorGridSquares();
     updateScore();
     updateMoves();
 };
+
+var Questionnaire = function() {
+    psiTurk.showPage('postquestionnaire.html');
+
+    finish = function() {
+        var comments = document.getElementById("comments").value;
+        psiTurk.recordUnstructuredData('comments', comments);
+        psiTurk.saveData();
+        psiTurk.completeHIT();
+    }
+}
 
 // Task object to keep track of the current phase
 var currentview;
