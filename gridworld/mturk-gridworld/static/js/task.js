@@ -692,7 +692,7 @@ var Practice = function() {
         } else {
             // after first scenario
             alert("In the next scenario, imagine someone observes where you move but " + 
-                  "does not know how much each color is worth.  How might you move so "+ 
+                  "can't see your score and does not know how much each color is worth.  How might you move so "+ 
                   "that it becomes as clear to them as possible what value each type of " + 
                   "square has? You want to teach another person what these values are so " + 
                   "that they could do the task in a new environment, where the squares " + 
@@ -712,7 +712,7 @@ var Practice = function() {
         // switch view to actual experiment
         currentview = new Experiment();
         alert("Next, you will see " + String(grids.length) + " different scenarios. Again imagine " +
-              "someone observes where you move but does not know how much each color is worth. Move in a way " +
+              "someone observes where you move but can't see your score and does not know how much each color is worth. Move in a way " +
               "that it becomes as clear to them as possible what value each type of " + 
               "square has. You want to teach another person what these values are so " + 
               "that they could do the task in a new environment, where the squares " + 
