@@ -1,0 +1,261 @@
+AIZTLQM7HHQN6:3OCHAWUVGPFG5ILGIYIO1PZXVF5KXA,practice_grid_0,"[[0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AIZTLQM7HHQN6:3OCHAWUVGPFG5ILGIYIO1PZXVF5KXA,practice_path_0,"[50, 51, 52, 53, 54, 55, 56, 46, 36, 26, 16, 17, 18, 19, 29, 39, 49, 59]"
+AIZTLQM7HHQN6:3OCHAWUVGPFG5ILGIYIO1PZXVF5KXA,practice_reward_0,1
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,reward_0,-3
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,reward_1,6
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,reward_2,6
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,reward_3,0
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,strategy_0,
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,strategy_1,avoiding the black going straight to white
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,strategy_2,going straight to white for points
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,strategy_3,
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,reward_8,0
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,strategy_8,ignored black and dark gray since they are bad
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,strategy_6,going to white for points
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,strategy_7,"taking straightest, shortest track"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,comments,none
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,reward_4,6
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,reward_5,6
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,reward_6,6
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,path_8,"[50, 51, 52, 53, 54, 55, 56, 57, 58, 59]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,path_6,"[50, 51, 61, 71, 72, 73, 74, 75, 76, 66, 56, 46, 47, 57, 67, 68, 69, 59]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,path_7,"[50, 51, 41, 42, 43, 44, 45, 46, 47, 48, 49, 59]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,strategy_4,avoiding the black and going through white
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,path_5,"[50, 51, 52, 53, 54, 55, 56, 46, 36, 37, 47, 48, 38, 39, 49, 59]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,path_2,"[50, 51, 52, 53, 63, 73, 74, 64, 65, 75, 76, 77, 78, 79, 69, 59]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,path_3,"[50, 51, 52, 53, 54, 55, 56, 57, 58, 59]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,path_0,"[50, 60, 70, 71, 72, 73, 74, 75, 76, 66, 56, 46, 47, 57, 67, 68, 58, 59]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,path_1,"[50, 51, 41, 31, 21, 11, 12, 13, 14, 15, 25, 35, 36, 26, 27, 37, 38, 39, 49, 59]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,reward_7,0
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,strategy_5,"staying away from black and light gray, just going through white for points"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,practice_path_1,"[50, 40, 30, 20, 10, 11, 12, 13, 14, 4, 5, 15, 16, 6, 7, 8, 9, 19, 29, 39, 49, 59]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,practice_path_0,"[50, 51, 52, 42, 32, 22, 12, 2, 3, 4, 5, 6, 16, 15, 14, 24, 25, 26, 27, 28, 29, 39, 49, 59]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,grid_6,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,practice_grid_0,"[[0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,practice_grid_1,"[[0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,grid_8,"[[0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0, 0], [0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0, 0]]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,practice_reward_1,6
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,practice_reward_0,6
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,grid_3,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0]]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,grid_2,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,grid_1,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, -1, -1, -1, 1, 1, 1, 0, 0], [0, 0, -1, -1, -1, 1, 1, 1, 0, 0], [0, 0, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0], [0, 0, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,grid_0,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,grid_7,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0], [0, 0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,path_4,"[50, 51, 52, 53, 63, 73, 74, 64, 65, 75, 76, 77, 78, 79, 69, 59]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,grid_5,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0.5, 0.5, 0.5, 0, 1, 1, 1, 0], [0, 0, 0.5, 0.5, 0.5, 0, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AVI7K876BV3QL:3EG49X351V79630RGUONR6UFUKLX6I,grid_4,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,reward_0,0
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,reward_1,0
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,reward_2,9
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,reward_3,0
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,strategy_0,No good blocks so finish it straight away.
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,strategy_1,Avoid any darker blocks.
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,strategy_2,Go through all the light blocks 
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,strategy_3,Avoid dark blocks
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,reward_8,9
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,strategy_8,Go through all lighter blocks
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,strategy_6,go through all lighter blocks
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,strategy_7,Avoid all blocks that are dark
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,comments,Thank you!
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,reward_4,6
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,reward_5,0
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,reward_6,9
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,path_8,"[50, 40, 30, 31, 32, 42, 43, 33, 34, 44, 45, 46, 36, 37, 47, 48, 38, 39, 49, 59]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,path_6,"[50, 51, 52, 42, 32, 22, 23, 24, 25, 35, 34, 33, 43, 53, 63, 73, 74, 75, 65, 64, 54, 55, 56, 57, 58, 59]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,path_7,"[50, 51, 52, 53, 54, 44, 43, 42, 41, 31, 21, 11, 12, 13, 14, 15, 25, 35, 36, 37, 27, 26, 16, 17, 18, 19, 29, 39, 49, 59]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,strategy_4,Get through white blocks that are good.
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,path_5,"[50, 51, 52, 53, 54, 55, 56, 57, 58, 59]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,path_2,"[50, 51, 52, 62, 63, 53, 43, 44, 54, 64, 65, 66, 56, 46, 47, 57, 67, 68, 58, 59]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,path_3,"[50, 51, 52, 53, 43, 44, 45, 46, 47, 48, 49, 59]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,path_0,"[50, 51, 52, 53, 54, 55, 56, 57, 58, 59]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,path_1,"[50, 60, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 69, 59]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,reward_7,9
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,strategy_5,Avoid darker colors
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,practice_path_1,"[50, 51, 52, 53, 43, 33, 23, 13, 3, 4, 5, 6, 16, 15, 14, 24, 34, 44, 54, 64, 65, 66, 67, 68, 69, 59]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,practice_path_0,"[50, 40, 30, 20, 10, 0, 1, 2, 3, 4, 5, 6, 16, 15, 14, 24, 34, 44, 54, 64, 65, 66, 67, 68, 69, 59]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,grid_6,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,practice_grid_0,"[[0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,practice_grid_1,"[[0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,grid_8,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0.5, 0.5, 0.5, 0, 1, 1, 1, 0], [0, 0, 0.5, 0.5, 0.5, 0, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,practice_reward_1,6
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,practice_reward_0,6
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,grid_3,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0], [0, 0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,grid_2,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,grid_1,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,grid_0,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0]]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,grid_7,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, -1, -1, -1, 1, 1, 1, 0, 0], [0, 0, -1, -1, -1, 1, 1, 1, 0, 0], [0, 0, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0], [0, 0, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,path_4,"[50, 51, 52, 53, 63, 73, 74, 64, 65, 75, 76, 77, 78, 79, 69, 59]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,grid_5,"[[0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0, 0], [0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0, 0]]"
+AZZA3J049G7R5:36H9ULYP63P4UCOD0JCQU3ZDCL9FJF,grid_4,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,reward_0,9
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,reward_1,5
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,reward_2,8.5
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,reward_3,0
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,strategy_0,Go through both fully to demonstrate the good.
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,strategy_1,"Get the white fully since it is good, while only touching black once to demonstrate the loss."
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,strategy_2,Left one gray untouched to demonstrate it is worth less.
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,strategy_3,Avoided it to show it isn't worth while
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,reward_8,8.5
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,strategy_8,"Got the two good ones to show gain, and briefly touched the gray to show it is the lesser of the two bad."
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,strategy_6,"Went all in on the lighter two to show positive, while avoiding the black completely to show to avoid."
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,strategy_7,Ignored both to show danger.
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,comments,
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,reward_4,0
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,reward_5,0
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,reward_6,9
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,path_8,"[50, 51, 52, 42, 43, 53, 54, 44, 45, 35, 25, 26, 36, 37, 27, 28, 29, 39, 49, 59]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,path_6,"[50, 51, 52, 42, 32, 33, 34, 44, 43, 53, 54, 55, 45, 46, 36, 37, 47, 48, 38, 39, 49, 59]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,path_7,"[50, 51, 52, 53, 54, 55, 56, 57, 58, 59]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,strategy_4,Went far away to show to avoid the darker colors.
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,path_5,"[50, 40, 30, 20, 10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 19, 29, 39, 49, 59]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,path_2,"[50, 51, 52, 53, 43, 44, 54, 64, 65, 66, 56, 46, 47, 57, 67, 68, 69, 59]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,path_3,"[50, 51, 52, 53, 54, 55, 56, 57, 58, 59]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,path_0,"[50, 51, 52, 53, 63, 73, 74, 75, 65, 64, 54, 44, 43, 33, 23, 24, 34, 35, 25, 26, 36, 46, 56, 57, 58, 59]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,path_1,"[50, 51, 52, 53, 63, 73, 74, 75, 65, 64, 54, 55, 45, 35, 36, 46, 47, 57, 58, 59]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,reward_7,0
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,strategy_5,Went far away to show to avoid the darker colors.
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,practice_path_1,"[50, 51, 41, 42, 32, 33, 23, 24, 14, 4, 5, 15, 16, 6, 7, 17, 18, 28, 38, 39, 49, 59]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,practice_path_0,"[50, 51, 52, 42, 43, 33, 34, 24, 14, 4, 5, 15, 16, 6, 7, 8, 9, 19, 29, 39, 49, 59]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,grid_6,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0.5, 0.5, 0.5, 0, 1, 1, 1, 0], [0, 0, 0.5, 0.5, 0.5, 0, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,practice_grid_0,"[[0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,practice_grid_1,"[[0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,grid_8,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, -1, -1, -1, 1, 1, 1, 0, 0], [0, 0, -1, -1, -1, 1, 1, 1, 0, 0], [0, 0, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0], [0, 0, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,practice_reward_1,5
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,practice_reward_0,6
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,grid_3,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0]]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,grid_2,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,grid_1,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,grid_0,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,grid_7,"[[0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0, 0], [0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0, 0]]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,path_4,"[50, 60, 70, 80, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 89, 79, 69, 59]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,grid_5,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AYKZ9H4BNW810:3V0Z7YWSIZVTKDCVTDB2D8GIY4B2V3,grid_4,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0], [0, 0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,reward_0,-3
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,reward_1,9
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,reward_2,8
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,reward_3,9
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,strategy_0,I went through both colors to show the score differentials
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,strategy_1,I went through all the good colors to maximize score
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,strategy_2,I went through all the bright colors and briefly the black one to show the score hcanges
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,strategy_3,I went through all the white olors to show the change in score
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,reward_8,-1
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,strategy_8,Went through the black square once for negative change in score
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,strategy_6,Went through all grey and white squares to show positive change while goign through dark squares briefly to show reduction in score
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,strategy_7,Went through all white squares for positive change then one black square for negative change
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,comments,I love you :)
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,reward_4,-1.5
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,reward_5,-1.5
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,reward_6,7.5
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,path_8,"[50, 51, 52, 62, 63, 73, 74, 75, 85, 86, 76, 66, 56, 57, 58, 59]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,path_6,"[50, 51, 52, 42, 43, 53, 54, 44, 34, 35, 25, 26, 36, 37, 27, 28, 38, 48, 58, 57, 67, 68, 69, 59]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,path_7,"[50, 51, 52, 62, 72, 73, 74, 75, 65, 64, 63, 53, 43, 44, 45, 35, 36, 46, 47, 57, 58, 59]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,strategy_4,I briefly went through the dark squares to show the score change
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,path_5,"[50, 51, 52, 42, 43, 33, 34, 35, 36, 37, 47, 48, 49, 59]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,path_2,"[50, 51, 52, 42, 32, 33, 43, 44, 34, 35, 45, 55, 65, 66, 76, 77, 67, 57, 56, 46, 36, 37, 47, 48, 38, 39, 49, 59]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,path_3,"[50, 51, 52, 62, 72, 82, 83, 84, 85, 75, 65, 64, 74, 73, 63, 53, 43, 33, 23, 24, 34, 35, 25, 26, 36, 46, 56, 57, 58, 59]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,path_0,"[50, 51, 52, 53, 63, 73, 83, 93, 94, 84, 74, 64, 54, 44, 43, 33, 23, 24, 25, 15, 16, 17, 18, 19, 29, 39, 49, 59]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,path_1,"[50, 51, 52, 62, 63, 53, 43, 44, 54, 64, 65, 66, 56, 46, 47, 57, 67, 68, 58, 59]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,reward_7,5
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,strategy_5,I went through the dark squares to show the score change
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,practice_path_1,"[50, 51, 52, 53, 54, 44, 34, 24, 14, 4, 5, 15, 16, 6, 7, 17, 27, 37, 38, 28, 29, 39, 49, 59]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,practice_path_0,"[50, 51, 52, 53, 43, 33, 23, 24, 25, 26, 16, 15, 14, 4, 5, 6, 7, 8, 9, 19, 29, 39, 49, 59]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,grid_6,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, -1, -1, -1, 1, 1, 1, 0, 0], [0, 0, -1, -1, -1, 1, 1, 1, 0, 0], [0, 0, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0], [0, 0, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,practice_grid_0,"[[0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,practice_grid_1,"[[0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,grid_8,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0]]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,practice_reward_1,4
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,practice_reward_0,6
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,grid_3,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,grid_2,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0.5, 0.5, 0.5, 0, 1, 1, 1, 0], [0, 0, 0.5, 0.5, 0.5, 0, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,grid_1,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,grid_0,"[[0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0, 0], [0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0, 0]]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,grid_7,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,path_4,"[50, 51, 52, 53, 54, 44, 45, 46, 36, 37, 47, 48, 49, 59]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,grid_5,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+AOKTAHY4F4J2B:3TOK3KHVJUD5GU04YD6JE73IDR07OM,grid_4,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0], [0, 0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,reward_0,1.5
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,reward_1,0
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,reward_2,3
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,reward_3,4.5
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,strategy_0,I stepped on the positive value one.
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,strategy_1,I went straight.
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,strategy_2,I walked on white.
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,strategy_3,I walked on the light tiles.
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,reward_8,3
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,strategy_8,Walked on white.
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,strategy_6,Went striahgt.
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,strategy_7,Walked on white.
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,comments,
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,reward_4,0
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,reward_5,0
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,reward_6,0
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,path_8,"[50, 51, 52, 62, 63, 64, 65, 66, 56, 57, 58, 59]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,path_6,"[50, 51, 52, 53, 54, 55, 56, 57, 58, 59]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,path_7,"[50, 51, 52, 53, 54, 55, 56, 57, 58, 59]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,strategy_4,I avoided dark.
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,path_5,"[50, 51, 52, 53, 43, 44, 45, 46, 47, 57, 58, 59]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,path_2,"[50, 51, 52, 62, 63, 64, 65, 66, 56, 57, 58, 59]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,path_3,"[50, 51, 52, 42, 43, 44, 45, 46, 47, 48, 58, 59]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,path_0,"[50, 51, 52, 53, 54, 64, 65, 66, 67, 68, 69, 59]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,path_1,"[50, 51, 52, 53, 54, 55, 56, 57, 58, 59]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,reward_7,3
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,strategy_5,Avoided dark.
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,practice_path_1,"[50, 51, 52, 53, 54, 55, 56, 66, 67, 68, 69, 59]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,practice_path_0,"[50, 51, 52, 53, 54, 55, 56, 66, 67, 68, 69, 59]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,grid_6,"[[0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0, 0], [0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0, 0]]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,practice_grid_0,"[[0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,practice_grid_1,"[[0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,grid_8,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,practice_reward_1,0
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,practice_reward_0,0
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,grid_3,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0.5, 0.5, 0.5, 0, 1, 1, 1, 0], [0, 0, 0.5, 0.5, 0.5, 0, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,grid_2,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,grid_1,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0]]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,grid_0,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, -1, -1, -1, 1, 1, 1, 0, 0], [0, 0, -1, -1, -1, 1, 1, 1, 0, 0], [0, 0, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0], [0, 0, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,grid_7,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,path_4,"[50, 51, 52, 62, 72, 73, 74, 75, 76, 77, 78, 68, 58, 59]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,grid_5,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0], [0, 0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+A25CFVQND4A0EV:3K4J6M3CXFOZ7JH4HX5VJPW6NDFAGT,grid_4,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,reward_0,9
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,reward_1,0
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,reward_2,0
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,reward_3,6
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,strategy_0,I specifically choose to move onto all of the white and grey squares before heading to the red square.
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,strategy_1,I specifically avoided touch both the dark grey and black squares completely.
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,strategy_2,I specifically choose to go out of my way and go in between the black and gark grey block even though it took longer to show they're not good to step onto.
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,strategy_3,I specifucally swerved up towards the black square but them veered towated the whit boxes and then intentionally moved onto all of them before ending the task.
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,reward_8,9
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,strategy_8,I first made sure to move onto all of the light grey quares before veering towards the black squares but stopping short and went towards the white squares making sure to move onto all of them before finishing.
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,strategy_6,I veered towards the black squares but choose not to go onto them.
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,strategy_7,I first went onto all the light grey squares then specifically went around the black squares intentionally not toughing them befor going onto all of the white squares.
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,comments,No issues.
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,reward_4,9
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,reward_5,0
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,reward_6,0
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,path_8,"[50, 51, 52, 42, 32, 33, 43, 44, 34, 35, 45, 55, 65, 66, 56, 46, 36, 37, 47, 48, 38, 39, 49, 59]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,path_6,"[50, 51, 52, 53, 63, 73, 74, 75, 76, 77, 78, 79, 69, 59]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,path_7,"[50, 51, 52, 53, 54, 44, 43, 42, 41, 31, 21, 11, 12, 13, 14, 15, 25, 35, 36, 26, 27, 37, 38, 39, 49, 59]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,strategy_4,
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,path_5,"[50, 51, 52, 53, 43, 33, 23, 24, 34, 44, 54, 64, 74, 75, 65, 55, 56, 57, 58, 59]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,path_2,"[50, 51, 52, 42, 32, 33, 34, 35, 45, 55, 65, 75, 76, 77, 78, 79, 69, 59]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,path_3,"[50, 51, 52, 42, 43, 53, 63, 73, 74, 64, 65, 75, 76, 77, 78, 79, 69, 59]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,path_0,"[50, 51, 52, 62, 72, 73, 63, 53, 43, 33, 23, 24, 34, 44, 54, 64, 74, 75, 65, 55, 45, 35, 25, 26, 27, 28, 29, 39, 49, 59]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,path_1,"[50, 51, 52, 53, 43, 44, 45, 46, 47, 48, 49, 59]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,reward_7,9
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,strategy_5,I specifically veered towards both the black and fark grey squares but choose not to touch them to show others they're undesireable.
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,practice_path_1,"[50, 51, 52, 53, 54, 44, 34, 24, 14, 4, 5, 15, 16, 6, 7, 8, 9, 19, 29, 39, 49, 59]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,practice_path_0,"[50, 40, 30, 20, 10, 11, 12, 13, 14, 4, 5, 15, 16, 6, 7, 8, 9, 19, 29, 39, 49, 59]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,grid_6,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0]]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,practice_grid_0,"[[0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,practice_grid_1,"[[0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, -1, -1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,grid_8,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0.5, 0.5, 0.5, 0, 1, 1, 1, 0], [0, 0, 0.5, 0.5, 0.5, 0, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,practice_reward_1,6
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,practice_reward_0,6
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,grid_3,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,grid_2,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, -1, -1, 0, -0.5, -0.5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,grid_1,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, -1, -1, -1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0], [0, 0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,grid_0,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,grid_7,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, -1, -1, -1, 1, 1, 1, 0, 0], [0, 0, -1, -1, -1, 1, 1, 1, 0, 0], [0, 0, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0], [0, 0, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,path_4,"[50, 51, 52, 42, 43, 53, 63, 64, 54, 44, 45, 46, 56, 66, 67, 57, 47, 48, 49, 59]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,grid_5,"[[0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, -1, -1, -1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0, 0], [0, 0, 0, -0.5, -0.5, -0.5, 0, 0, 0, 0]]"
+ACN0C9HPYDTED:3P529IW9KZGAP2CD34O3AIC5GAEFLH,grid_4,"[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0.5, 0.5, 0, 1, 1, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
