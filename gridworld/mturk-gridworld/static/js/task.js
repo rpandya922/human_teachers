@@ -43,35 +43,6 @@ function shuffle(a) {
     return a;
 }
 
-// example for pictures
-// colors1 = [[0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
-//           [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
-//           [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
-//           [0.6, 0.8, 0.6, 0.5, 0.5, 0.3, 0.5],
-//           [0.8, 1.0, 0.8, 0.5, 0.3, 0.0, 0.3],
-//           [0.6, 0.8, 0.6, 0.5, 0.5, 0.3, 0.5]];
-// old, hand-designed
-// colors1= [[0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
-//           [0.6, 1.0, 0.6, 0.5, 0.6, 1.0, 0.6],
-//           [0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
-//           [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5],
-//           [0.5, 0.5, 0.3, 0.0, 0.3, 0.5, 0.5],
-//           [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5]];
-
-// colors2= [[0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
-//           [0.6, 1.0, 0.6, 0.5, 0.6, 0.8, 0.6],
-//           [0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
-//           [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5],
-//           [0.5, 0.5, 0.3, 0.0, 0.3, 0.5, 0.5],
-//           [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5]];
-
-// colors3= [[0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
-//           [0.6, 0.8, 0.6, 0.5, 0.6, 1.0, 0.6],
-//           [0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5],
-//           [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5],
-//           [0.5, 0.5, 0.3, 0.0, 0.3, 0.5, 0.5],
-//           [0.5, 0.5, 0.5, 0.3, 0.5, 0.5, 0.5]];
-
 //new, rbf based
 rbf_colors1= [[ 0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5 ],
           [ 0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5,   0.5 ],
@@ -157,6 +128,7 @@ rewards_ex= [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
              [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
              [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
 
+// created with create_grid.py
 colors1 = [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
            [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
            [ 0.,  0.,  0., -1., -1., -1.,  0.,  0.,  0.,  0.],
@@ -354,9 +326,9 @@ practice_colors1 = [[ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
+                    [ 0.,  0.,  0., 0.5, 0.5,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0., 0.5, 0.5,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0., 0.5, 0.5,  0.,  0.,  0.,  0.,  0.]];
 practice_rewards1= [[ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
@@ -364,9 +336,9 @@ practice_rewards1= [[ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
+                    [ 0.,  0.,  0., 0.5, 0.5,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0., 0.5, 0.5,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0., 0.5, 0.5,  0.,  0.,  0.,  0.,  0.]];
 
 practice_colors2 = [[ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
@@ -375,9 +347,9 @@ practice_colors2 = [[ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
+                    [ 0.,  0.,  0., 0.5, 0.5,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0., 0.5, 0.5,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0., 0.5, 0.5,  0.,  0.,  0.,  0.,  0.]];
 practice_rewards2= [[ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
@@ -385,19 +357,127 @@ practice_rewards2= [[ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0., -1., -1.,  0.],
                     [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
-                    [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
+                    [ 0.,  0.,  0., 0.5, 0.5,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0., 0.5, 0.5,  0.,  0.,  0.,  0.,  0.],
+                    [ 0.,  0.,  0., 0.5, 0.5,  0.,  0.,  0.,  0.,  0.]];
+
+// newer, "more interesting" grids from create_grid.py
+maze = [[-1. , -1. , -1. ,  1. ,  1. ,  1. ,  1. ,  1. ,  1. ,  1. ],
+        [ 1. ,  1. ,  1. ,  1. , -1. ,  1. , -1. , -1. ,  1. ,  1. ],
+        [ 1. , -1. , -1. , -1. , -1. ,  1. , -1. , -1. ,  1. ,  1. ],
+        [ 1. , -1. , -1. ,  1. ,  1. ,  1. , -1. , -1. ,  1. ,  1. ],
+        [ 1. , -1. , -1. ,  1. , -1. , -1. , -1. , -1. , -1. , -0.5],
+        [ 1. ,  1. , -1. ,  1. , -1. , -1. , -1. , -1. , -1. ,  1. ],
+        [-1. , -1. , -1. ,  1. , -1. , -1. , -1. , -1. , -1. ,  1. ],
+        [ 1. ,  1. ,  1. ,  1. , -1. , -1. , -1. , -1. , -1. ,  1. ],
+        [ 1. , -1. , -1. , -1. , -1. , -1. , -1. , -1. , -1. ,  1. ],
+        [ 1. ,  1. ,  1. ,  1. ,  1. ,  1. ,  1. ,  1. ,  1. ,  1. ]];
+encircle1 = [[ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. , -1. , -1. , -1. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. , -1. ,  1. , -0.5,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. , -1. , -1. , -1. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ]];
+encircle2 = [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0., -1., -1., -1., -1., -1.,  0.,  0.,  0.],
+             [ 0.,  0., -1., -1., -1., -1., -1.,  0.,  0.,  0.],
+             [ 0.,  0., -1., -1.,  1., -1., -1.,  0.,  0.,  0.],
+             [ 0.,  0., -1., -1., -1., -1., -1.,  0.,  0.,  0.],
+             [ 0.,  0., -1., -1., -1., -1., -1.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
+backtrack = [[ 0.,  0.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+             [ 0.,  0.,  1.,  1.,  1.,  1.,  1., -1., -1., -1.],
+             [ 0.,  0.,  1.,  1.,  1.,  1.,  1., -1., -1., -1.],
+             [ 0.,  0.,  1.,  1.,  1.,  1.,  1., -1., -1., -1.],
+             [ 0.,  0.,  1.,  1.,  1.,  1.,  1., -1., -1., -1.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
+stand_still = [[ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  1. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0.5,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0.5,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0.5,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ]];
+maze_rewards = [[-1. , -1. , -1. ,  1. ,  1. ,  1. ,  1. ,  1. ,  1. ,  1. ],
+        [ 1. ,  1. ,  1. ,  1. , -1. ,  1. , -1. , -1. ,  1. ,  1. ],
+        [ 1. , -1. , -1. , -1. , -1. ,  1. , -1. , -1. ,  1. ,  1. ],
+        [ 1. , -1. , -1. ,  1. ,  1. ,  1. , -1. , -1. ,  1. ,  1. ],
+        [ 1. , -1. , -1. ,  1. , -1. , -1. , -1. , -1. , -1. , -0.5],
+        [ 1. ,  1. , -1. ,  1. , -1. , -1. , -1. , -1. , -1. ,  1. ],
+        [-1. , -1. , -1. ,  1. , -1. , -1. , -1. , -1. , -1. ,  1. ],
+        [ 1. ,  1. ,  1. ,  1. , -1. , -1. , -1. , -1. , -1. ,  1. ],
+        [ 1. , -1. , -1. , -1. , -1. , -1. , -1. , -1. , -1. ,  1. ],
+        [ 1. ,  1. ,  1. ,  1. ,  1. ,  1. ,  1. ,  1. ,  1. ,  1. ]];
+encircle1_rewards = [[ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. , -1. , -1. , -1. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. , -1. ,  1. , -0.5,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. , -1. , -1. , -1. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+             [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ]];
+encircle2_rewards = [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0., -1., -1., -1., -1., -1.,  0.,  0.,  0.],
+             [ 0.,  0., -1., -1., -1., -1., -1.,  0.,  0.,  0.],
+             [ 0.,  0., -1., -1.,  1., -1., -1.,  0.,  0.,  0.],
+             [ 0.,  0., -1., -1., -1., -1., -1.,  0.,  0.,  0.],
+             [ 0.,  0., -1., -1., -1., -1., -1.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
+backtrack_rewards = [[ 0.,  0.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+             [ 0.,  0.,  1.,  1.,  1.,  1.,  1., -1., -1., -1.],
+             [ 0.,  0.,  1.,  1.,  1.,  1.,  1., -1., -1., -1.],
+             [ 0.,  0.,  1.,  1.,  1.,  1.,  1., -1., -1., -1.],
+             [ 0.,  0.,  1.,  1.,  1.,  1.,  1., -1., -1., -1.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+             [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]];
+stand_still_rewards = [[ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  1. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0.5,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0.5,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0.5,  0. ,  0. ,  0. ,  0. ,  0. ],
+               [ 0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ,  0. ]];
 
 practice_grids = [practice_colors1, practice_colors2];
 practice_rewards = [practice_rewards1, practice_rewards2];
 
-grids = [colors1, colors2, colors3, colors4, colors5, colors6, colors7, colors8, colors9];
-all_rewards = [rewards1, rewards2, rewards3, rewards4, rewards5, rewards6, rewards7, rewards8, rewards9];
+grids = [colors9, colors1, colors2, colors4, colors6, colors7, colors3, 
+         maze, encircle1, encircle2, backtrack, stand_still];
+all_rewards = [rewards9, rewards1, rewards2, rewards4, rewards6, rewards7, 
+               rewards3, maze_rewards, encircle1_rewards, encircle2_rewards, 
+               backtrack_rewards, stand_still_rewards];
+// grids = [colors1, colors2, colors3, colors4, colors5, colors6, colors7, colors8, colors9];
+// all_rewards = [rewards1, rewards2, rewards3, rewards4, rewards5, rewards6, rewards7, rewards8, rewards9];
 
 //Make sure color and reward are shuffled the same way
 var shuffle_order = shuffle(_.range(grids.length));
-// var shuffle_order = _.range(grids.length) 
+psiTurk.recordUnstructuredData("grid_order", shuffle_order);
+
 grids = match_shuffle(grids, shuffle_order);
 all_rewards = match_shuffle(all_rewards, shuffle_order);
 
@@ -523,7 +603,23 @@ var numToColor = function(grid) {
         }
     }
 } 
-
+// code to read from json file for grids, instead of hard-coding at top
+// still needs to be implemented in Practice and Experiment
+var colors_test;
+function callback() {
+  console.log(colors_test);
+}
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var obj = JSON.parse(this.responseText);
+        colors_test = obj["colors_0"];
+        callback();
+    }
+};
+// flask looks in templates/ by default, so test.txt lives there
+xmlhttp.open("GET", "test.txt", true);
+xmlhttp.send();
 /********************
 * HTML manipulation
 *
@@ -624,6 +720,12 @@ var Practice = function() {
         }
     }
 
+    moveCircletoPosition = function(idx) {
+      let [x, y] = indexToxy(idx);
+      circle.style.left = (x - width/2) + "px";
+      circle.style.top = (y - height/2) + "px";
+    }
+
     connectPath = function(idx) {
         // checks if the index clicked is a neighbor of the previous index (ie is valid next move) 
         // and the goal hasn't been reached 
@@ -641,6 +743,8 @@ var Practice = function() {
                 let [x, y] = indexToxy(idx);
                 let [x1, y1] = indexToxy(prev_idx);
                 document.body.appendChild(createLine(x, y, x1, y1));
+                // draw circle at current idx
+                moveCircletoPosition(idx);
                 prev_idx = idx;
             }
         }
@@ -674,6 +778,7 @@ var Practice = function() {
         document.getElementById("finish").classList.add("disabled");
         resetMoves();
         resetScore();
+        moveCircletoPosition(start_loc);
     };
 
     next = function() {
@@ -681,8 +786,6 @@ var Practice = function() {
         psiTurk.recordUnstructuredData('practice_grid_' + grid_idx, rewards);
         psiTurk.recordUnstructuredData('practice_path_' + grid_idx, path);
         psiTurk.recordUnstructuredData('practice_reward_' + grid_idx, reward);
-        // reset the view and recolor the grid with the environment
-        clearAll();
         grid_idx += 1;
         colorGridSquares();
         if (grid_idx == practice_grids.length) {
@@ -692,37 +795,54 @@ var Practice = function() {
         } else {
             // after first scenario
             alert("In the next scenario, imagine someone observes where you move but " + 
-                  "can't see your score and does not know how much each color is worth.  How might you move so "+ 
-                  "that it becomes as clear to them as possible what value each type of " + 
-                  "square has? You want to teach another person what these values are so " + 
-                  "that they could do the task in a new environment, where the squares " + 
-                  "might be arranged differently.");
+                  "can't see your score and does not know how much each color is worth. " + 
+                  "How might you move so that it becomes clear what value each color " +
+                  "square has? You want to teach them what these values are so that they " + 
+                  "could do the task even when the squares are arranged very differently.");
             // change instructions text on the page
-            d3.select("#instructions").text("Show someone who doesn't know how much colors are worth " + 
-                                            "that white squares give high scores and black squares give " + 
-                                            "low scores.");
+            d3.select("#instructions").text("Show someone who can't see the score and doesn't " +
+                                            "know how much colors are worth the value of each color.");
         }
+        // reset the view and recolor the grid with the environment
+        clearAll();
     }
 
     finish = function() {
-        // save current practice grid, user's path and their total reward
+        // ask probing questions about putting themselves in observer's shoes
+        answer1 = confirm("Do you think an observer would know which colors are good and which are bad?");
+        answer2 = confirm("Do you think an observer could tell the relative value of each individual color?");
+        // save answers, current practice grid, user's path and their total reward
+        psiTurk.recordUnstructuredData('good_bad_colors_answer', answer1);
+        psiTurk.recordUnstructuredData('relative_value_answer', answer2);
         psiTurk.recordUnstructuredData('practice_grid_' + grid_idx, rewards);
         psiTurk.recordUnstructuredData('practice_path_' + grid_idx, path);
         psiTurk.recordUnstructuredData('practice_reward_' + grid_idx, reward);
         // switch view to actual experiment
         currentview = new Experiment();
         alert("Next, you will see " + String(grids.length) + " different scenarios. Again imagine " +
-              "someone observes where you move but can't see your score and does not know how much each color is worth. Move in a way " +
-              "that it becomes as clear to them as possible what value each type of " + 
-              "square has. You want to teach another person what these values are so " + 
-              "that they could do the task in a new environment, where the squares " + 
-              "might be arranged differently.");
+              "someone observes where you move but can't see your score and does not know " + 
+              "how much each color is worth. Move in a way that it becomes clear what value each color " + 
+              "square has. You want to teach them what these values are so that they could do the " + 
+              "task even when the squares are arranged very differently.");
     }
 
     // initialzation, this is only run once
+
     colorGridSquares();
     updateScore();
     updateMoves();
+
+    var circle = document.createElement("circle");
+    circle.id = "current-position";
+    document.body.appendChild(circle);
+    circle.classList.add("circle");
+    circle.style.background = "#f48942";
+    circle.style.position = "absolute";
+    let [x, y] = indexToxy(prev_idx);
+    var width = circle.clientWidth;
+    var height = circle.clientHeight;
+    circle.style.left = (x - width/2) + "px";
+    circle.style.top = (y - height/2) + "px";
 }
 
 var Experiment = function() {
@@ -814,6 +934,12 @@ var Experiment = function() {
         }
     }
 
+    moveCircletoPosition = function(idx) {
+      let [x, y] = indexToxy(idx);
+      circle.style.left = (x - width/2) + "px";
+      circle.style.top = (y - height/2) + "px";
+    }
+
     connectPath = function(idx) {
         if (isNeighbor(prev_idx, idx) && !turns_finished && !goal_reached) {
             if (idx == goal_loc) {
@@ -828,6 +954,8 @@ var Experiment = function() {
                 let [x, y] = indexToxy(idx);
                 let [x1, y1] = indexToxy(prev_idx);
                 document.body.appendChild(createLine(x, y, x1, y1));
+                // draw circle at current idx
+                moveCircletoPosition(idx);
                 prev_idx = idx;
             }
         }
@@ -857,6 +985,7 @@ var Experiment = function() {
         document.getElementById("finish").classList.add("disabled");
         resetMoves();
         resetScore();
+        moveCircletoPosition(start_loc);
     };
 
     next = function() {
@@ -865,13 +994,14 @@ var Experiment = function() {
         psiTurk.recordUnstructuredData('grid_' + grid_idx, rewards);
         psiTurk.recordUnstructuredData('path_' + grid_idx, path);
         psiTurk.recordUnstructuredData('reward_' + grid_idx, reward);
-        clearAll();
+        
         grid_idx += 1;
         colorGridSquares();
         if (grid_idx == grids.length) {
             document.getElementById("finish").classList.remove("disabled");
             document.getElementById("next").classList.add("disabled");
         }
+        clearAll();
     }
 
     finish = function() {
@@ -886,6 +1016,18 @@ var Experiment = function() {
     colorGridSquares();
     updateScore();
     updateMoves();
+
+    var circle = document.createElement("circle");
+    circle.id = "current-position";
+    document.body.appendChild(circle);
+    circle.classList.add("circle");
+    circle.style.background = "#f48942";
+    circle.style.position = "absolute";
+    let [x, y] = indexToxy(prev_idx);
+    var width = circle.clientWidth;
+    var height = circle.clientHeight;
+    circle.style.left = (x - width/2) + "px";
+    circle.style.top = (y - height/2) + "px";
 };
 
 var Questionnaire = function() {

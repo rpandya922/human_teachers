@@ -387,3 +387,1745 @@ TemplateNotFound: example_grid.png
 [2018-05-21 16:38:37 +0000] [29515] [CRITICAL] WORKER TIMEOUT (pid:29532)
 [2018-05-21 16:38:37 +0000] [29515] [CRITICAL] WORKER TIMEOUT (pid:29533)
 [2018-05-21 16:38:37 +0000] [29515] [CRITICAL] WORKER TIMEOUT (pid:29534)
+[2018-05-23 12:00:25,804] ERROR in app: Exception on /exp [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/user_utils.py", line 20, in new_func
+    resp = make_response(func(*args, **kwargs))
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 439, in start_exp
+    db_session.commit()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 149, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 721, in commit
+    self.transaction.commit()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 354, in commit
+    self._prepare_impl()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 334, in _prepare_impl
+    self.session.flush()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1818, in flush
+    self._flush(objects)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1936, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 58, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1900, in _flush
+    flush_context.execute()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 372, in execute
+    rec.execute(self)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 525, in execute
+    uow
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 64, in save_obj
+    table, insert)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 541, in _emit_insert_statements
+    execute(statement, multiparams)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 662, in execute
+    params)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 874, in _execute_context
+    context)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1024, in _handle_dbapi_exception
+    exc_info
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 196, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 867, in _execute_context
+    context)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 324, in do_execute
+    cursor.execute(statement, parameters)
+IntegrityError: (IntegrityError) UNIQUE constraint failed: turkdemo.uniqueid u'INSERT INTO turkdemo (uniqueid, assignmentid, workerid, hitid, ipaddress, browser, platform, language, cond, counterbalance, codeversion, beginhit, beginexp, endhit, bonus, status, mode, datastring) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)' ('debug46W1YH:debugJK7KZI', u'debugJK7KZI', u'debug46W1YH', u'debugWCWEXB', '127.0.0.1', 'chrome', 'linux', 'UNKNOWN', 0, 0, '1.0', '2018-05-23 12:00:25.622893', None, None, 0.0, 1, u'debug', None)
+[2018-05-23 12:02:18,605] ERROR in app: Exception on /exp [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/user_utils.py", line 20, in new_func
+    resp = make_response(func(*args, **kwargs))
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 439, in start_exp
+    db_session.commit()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 149, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 721, in commit
+    self.transaction.commit()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 354, in commit
+    self._prepare_impl()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 334, in _prepare_impl
+    self.session.flush()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1818, in flush
+    self._flush(objects)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1936, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 58, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1900, in _flush
+    flush_context.execute()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 372, in execute
+    rec.execute(self)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 525, in execute
+    uow
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 64, in save_obj
+    table, insert)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 541, in _emit_insert_statements
+    execute(statement, multiparams)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 662, in execute
+    params)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 874, in _execute_context
+    context)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1024, in _handle_dbapi_exception
+    exc_info
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 196, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 867, in _execute_context
+    context)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 324, in do_execute
+    cursor.execute(statement, parameters)
+IntegrityError: (IntegrityError) UNIQUE constraint failed: turkdemo.uniqueid u'INSERT INTO turkdemo (uniqueid, assignmentid, workerid, hitid, ipaddress, browser, platform, language, cond, counterbalance, codeversion, beginhit, beginexp, endhit, bonus, status, mode, datastring) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)' ('debugFJRF5Z:debugAG0OFN', u'debugAG0OFN', u'debugFJRF5Z', u'debugIYMBN2', '127.0.0.1', 'chrome', 'linux', 'UNKNOWN', 0, 0, '1.0', '2018-05-23 12:02:18.373702', None, None, 0.0, 1, u'debug', None)
+[2018-05-23 15:01:48,980] ERROR in app: Exception on /exp [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/user_utils.py", line 20, in new_func
+    resp = make_response(func(*args, **kwargs))
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 439, in start_exp
+    db_session.commit()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 149, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 721, in commit
+    self.transaction.commit()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 354, in commit
+    self._prepare_impl()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 334, in _prepare_impl
+    self.session.flush()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1818, in flush
+    self._flush(objects)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1936, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 58, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1900, in _flush
+    flush_context.execute()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 372, in execute
+    rec.execute(self)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 525, in execute
+    uow
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 64, in save_obj
+    table, insert)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 541, in _emit_insert_statements
+    execute(statement, multiparams)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 662, in execute
+    params)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 874, in _execute_context
+    context)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1024, in _handle_dbapi_exception
+    exc_info
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 196, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 867, in _execute_context
+    context)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 324, in do_execute
+    cursor.execute(statement, parameters)
+IntegrityError: (IntegrityError) UNIQUE constraint failed: turkdemo.uniqueid u'INSERT INTO turkdemo (uniqueid, assignmentid, workerid, hitid, ipaddress, browser, platform, language, cond, counterbalance, codeversion, beginhit, beginexp, endhit, bonus, status, mode, datastring) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)' ('debugWST4M5:debugBR8IKD', u'debugBR8IKD', u'debugWST4M5', u'debugWSW8AA', '127.0.0.1', 'chrome', 'linux', 'UNKNOWN', 0, 0, '1.0', '2018-05-23 15:01:48.749210', None, None, 0.0, 1, u'debug', None)
+[2018-05-23 17:29:58 +0000] [14097] [CRITICAL] WORKER TIMEOUT (pid:14117)
+[2018-05-23 17:29:58 +0000] [14097] [CRITICAL] WORKER TIMEOUT (pid:14123)
+[2018-05-23 17:29:58 +0000] [14097] [CRITICAL] WORKER TIMEOUT (pid:14126)
+[2018-05-24 11:32:10,934] ERROR in app: Exception on /exp [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/user_utils.py", line 20, in new_func
+    resp = make_response(func(*args, **kwargs))
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 439, in start_exp
+    db_session.commit()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 149, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 721, in commit
+    self.transaction.commit()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 354, in commit
+    self._prepare_impl()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 334, in _prepare_impl
+    self.session.flush()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1818, in flush
+    self._flush(objects)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1936, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 58, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1900, in _flush
+    flush_context.execute()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 372, in execute
+    rec.execute(self)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 525, in execute
+    uow
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 64, in save_obj
+    table, insert)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 541, in _emit_insert_statements
+    execute(statement, multiparams)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 662, in execute
+    params)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 761, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 874, in _execute_context
+    context)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1024, in _handle_dbapi_exception
+    exc_info
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 196, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 867, in _execute_context
+    context)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 324, in do_execute
+    cursor.execute(statement, parameters)
+IntegrityError: (IntegrityError) UNIQUE constraint failed: turkdemo.uniqueid u'INSERT INTO turkdemo (uniqueid, assignmentid, workerid, hitid, ipaddress, browser, platform, language, cond, counterbalance, codeversion, beginhit, beginexp, endhit, bonus, status, mode, datastring) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)' ('debugXKXUDH:debugXRPR2A', u'debugXRPR2A', u'debugXKXUDH', u'debugEABR9Y', '127.0.0.1', 'chrome', 'linux', 'UNKNOWN', 0, 0, '1.0', '2018-05-24 11:32:10.930665', None, None, 0.0, 1, u'debug', None)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17442)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17445)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17446)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17448)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17449)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17451)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17454)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17455)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17457)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17458)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17460)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17431)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17432)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17435)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17436)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17437)
+[2018-05-24 17:49:29 +0000] [17426] [CRITICAL] WORKER TIMEOUT (pid:17438)
+[2018-05-25 13:17:41 +0000] [19330] [CRITICAL] WORKER TIMEOUT (pid:19360)
+[2018-05-25 13:17:41 +0000] [19330] [CRITICAL] WORKER TIMEOUT (pid:19361)
+[2018-05-25 13:17:41 +0000] [19330] [CRITICAL] WORKER TIMEOUT (pid:19349)
+[2018-05-25 13:20:45 +0000] [19330] [CRITICAL] WORKER TIMEOUT (pid:19364)
+[2018-05-25 13:20:45 +0000] [19330] [CRITICAL] WORKER TIMEOUT (pid:19366)
+[2018-05-25 13:20:45 +0000] [19330] [CRITICAL] WORKER TIMEOUT (pid:19338)
+[2018-05-25 13:40:13 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22084)
+[2018-05-25 13:40:13 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22097)
+[2018-05-25 13:40:13 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22078)
+[2018-05-25 13:45:16 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22086)
+[2018-05-25 13:45:16 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22444)
+[2018-05-25 13:45:16 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22072)
+[2018-05-25 13:54:01 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22950)
+[2018-05-25 13:54:01 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22446)
+[2018-05-25 13:54:01 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22096)
+[2018-05-25 13:56:23 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22090)
+[2018-05-25 13:56:23 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22091)
+[2018-05-25 13:56:23 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:23792)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22946)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22947)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22442)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22069)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22071)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22073)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22077)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22079)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22083)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22088)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22092)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:22094)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:24149)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:24150)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:24151)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:23791)
+[2018-05-25 15:30:52 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:23793)
+[2018-05-25 16:01:47 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:25248)
+[2018-05-25 16:01:47 +0000] [22063] [CRITICAL] WORKER TIMEOUT (pid:25253)
+[2018-05-28 12:02:54 +0000] [22120] [CRITICAL] WORKER TIMEOUT (pid:22147)
+[2018-05-28 12:02:55 +0000] [22120] [CRITICAL] WORKER TIMEOUT (pid:22155)
+[2018-05-28 12:02:55 +0000] [22120] [CRITICAL] WORKER TIMEOUT (pid:22132)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30337)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30339)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30340)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30342)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30344)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30346)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30349)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30351)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30353)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30354)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30357)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30360)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30361)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30362)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30332)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30334)
+[2018-05-29 15:41:48 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:30335)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31824)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31782)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31783)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31784)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31785)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31818)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31787)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31788)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31789)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31822)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31823)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31792)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31796)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31797)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31817)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31803)
+[2018-05-29 16:30:33 +0000] [30327] [CRITICAL] WORKER TIMEOUT (pid:31805)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7424)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7426)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7427)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7428)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7431)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7433)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7436)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7438)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7440)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7442)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7444)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7415)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7416)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7417)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7421)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7422)
+[2018-05-30 18:50:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:7423)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22730)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22731)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22734)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22737)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22738)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22740)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22741)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22742)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22743)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22746)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22753)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22754)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22755)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22756)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22763)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22764)
+[2018-05-31 10:02:24 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22765)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1051)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1056)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:993)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1058)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1060)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1061)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1073)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1066)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1003)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1068)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1005)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1009)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1074)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1077)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1080)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1082)
+[2018-05-31 14:18:36 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:1085)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15110)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15114)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15184)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15121)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15187)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15192)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15129)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15130)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15131)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15132)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15194)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15198)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15139)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15140)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15196)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15147)
+[2018-05-31 14:47:25 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15157)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16705)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16707)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16708)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16709)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16680)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16713)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16682)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16685)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16686)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16687)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16688)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16690)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16693)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16717)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16699)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16700)
+[2018-05-31 15:00:08 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:16714)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17550)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17491)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17492)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17493)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17494)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17495)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17496)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17497)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17498)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17499)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17500)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17501)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17581)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17529)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17530)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17533)
+[2018-05-31 18:43:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:17535)
+[2018-06-01 09:31:33 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25860)
+[2018-06-01 09:31:33 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25880)
+[2018-06-01 09:31:33 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25887)
+[2018-06-01 09:31:33 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25890)
+[2018-06-01 09:31:33 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25854)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25858)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:2700)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:2698)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:2699)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25868)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:2703)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25872)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25873)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25875)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25876)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25879)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25882)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25884)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25885)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25893)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:2708)
+[2018-06-01 10:25:09 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25852)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6214)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6215)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6216)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6218)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6219)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6221)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6222)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6229)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6230)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6231)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6233)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6234)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6235)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6236)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6240)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6242)
+[2018-06-01 14:55:20 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:6244)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15361)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15362)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15368)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15330)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15333)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15334)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15335)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15336)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15339)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15345)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15350)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15353)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15355)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15357)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15358)
+[2018-06-02 12:07:12 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15359)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3345)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3346)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3356)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:15332)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3358)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3359)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3375)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3376)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3377)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3393)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3318)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3406)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3321)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3316)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3317)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3320)
+[2018-06-02 14:11:53 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:3323)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5912)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5915)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5933)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5937)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5940)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5941)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5964)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5965)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5971)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5974)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5977)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5980)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5981)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5983)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5984)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5990)
+[2018-06-02 17:22:58 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:5991)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10113)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10117)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10119)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10120)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10121)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10122)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10123)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10124)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10130)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10132)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10099)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10100)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10101)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10102)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10106)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10107)
+[2018-06-03 11:34:17 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:10108)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25616)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25617)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25622)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25623)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25624)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25625)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25627)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25632)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25633)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25636)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25637)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25639)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25641)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25642)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25643)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25646)
+[2018-06-03 17:20:30 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:25618)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:8973)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:8974)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:8975)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:8976)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:8977)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:8978)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:8979)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:8990)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:9002)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:9017)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:9030)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:9036)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:9039)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:9043)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:9047)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:9050)
+[2018-06-04 09:04:39 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:9052)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21056)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21057)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21010)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21016)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21019)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21022)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21024)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21030)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21035)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21036)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21037)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21039)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21040)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21042)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21044)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21052)
+[2018-06-04 10:42:23 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:21055)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22400)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22401)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22402)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22407)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22408)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22411)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22414)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22418)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22419)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22421)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22423)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22426)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22428)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22429)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22430)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22396)
+[2018-06-04 11:42:43 +0000] [7404] [CRITICAL] WORKER TIMEOUT (pid:22395)
+[2018-06-04 20:15:17 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29769)
+[2018-06-04 20:15:17 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29770)
+[2018-06-04 20:15:17 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29771)
+[2018-06-04 20:15:17 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29774)
+[2018-06-04 20:15:17 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29777)
+[2018-06-04 20:15:17 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29749)
+[2018-06-04 20:15:17 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29750)
+[2018-06-04 20:15:17 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29753)
+[2018-06-04 20:15:17 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29754)
+[2018-06-04 20:15:17 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29756)
+[2018-06-04 20:15:17 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29757)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:7296)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:7297)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29762)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29764)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:7301)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29766)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:7303)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:7305)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:7308)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:7298)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29776)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29778)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:7282)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:7283)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:7285)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:7287)
+[2018-06-05 08:56:42 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:29759)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14470)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14411)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14476)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14478)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14415)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14480)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14493)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14405)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14496)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14497)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14504)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14507)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14512)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14514)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14517)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14521)
+[2018-06-05 09:42:21 +0000] [29743] [CRITICAL] WORKER TIMEOUT (pid:14523)
+[2018-06-05 14:52:53,226] ERROR in app: Exception on /data/grids.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 726, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: data/grids.txt
+[2018-06-05 14:53:15,442] ERROR in app: Exception on /data/grids.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 726, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: data/grids.txt
+[2018-06-05 14:53:29,126] ERROR in app: Exception on /data/grids.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 726, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: data/grids.txt
+[2018-06-05 14:53:59 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:29827)
+[2018-06-05 14:53:59 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:29829)
+[2018-06-05 14:53:59 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:29842)
+[2018-06-05 14:53:59 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:29848)
+[2018-06-05 14:53:59 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:29822)
+[2018-06-05 14:55:34,511] ERROR in app: Exception on /data/grids.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 726, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: data/grids.txt
+[2018-06-05 14:55:39,418] ERROR in app: Exception on /data/grids.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 726, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: data/grids.txt
+[2018-06-05 14:55:55,585] ERROR in app: Exception on /grids.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: grids.txt
+[2018-06-05 14:56:00,229] ERROR in app: Exception on /grids.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: grids.txt
+[2018-06-05 14:56:28,952] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 14:56:32,768] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 14:57:03 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:30723)
+[2018-06-05 14:57:03 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:30724)
+[2018-06-05 14:57:03 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:29838)
+[2018-06-05 14:57:03 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:29840)
+[2018-06-05 14:57:03 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:29823)
+[2018-06-05 14:59:28,182] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 14:59:32,258] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 15:01:23,995] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 15:01:32 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:29846)
+[2018-06-05 15:01:32 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:29850)
+[2018-06-05 15:01:32 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:31420)
+[2018-06-05 15:18:44,780] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 15:18:51,958] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 15:19:22 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:29833)
+[2018-06-05 15:19:22 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:29845)
+[2018-06-05 15:19:22 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:31421)
+[2018-06-05 15:19:22 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:30729)
+[2018-06-05 15:19:22 +0000] [29816] [CRITICAL] WORKER TIMEOUT (pid:32149)
+[2018-06-05 15:55:19,569] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 15:56:39,840] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 15:57:41,549] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 15:58:52,065] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 15:59:41,023] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 16:01:22,818] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 16:10:58,929] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 16:12:51,618] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 16:14:00,181] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 16:16:02,838] ERROR in app: Exception on /test.txt [GET]
+Traceback (most recent call last):
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ravi/dev/human_ergo_estimation/venv/local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: test.txt
+[2018-06-05 16:32:58 +0000] [3697] [CRITICAL] WORKER TIMEOUT (pid:3712)
+[2018-06-05 16:32:58 +0000] [3697] [CRITICAL] WORKER TIMEOUT (pid:3724)
+[2018-06-05 16:32:58 +0000] [3697] [CRITICAL] WORKER TIMEOUT (pid:3706)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7298)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7302)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7303)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7304)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7305)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7306)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7309)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7310)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7311)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7284)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7285)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7288)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7289)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7290)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7292)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7293)
+[2018-06-05 17:50:02 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7294)
+[2018-06-06 10:23:06 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10112)
+[2018-06-06 10:23:06 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10177)
+[2018-06-06 10:23:06 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10178)
+[2018-06-06 10:23:06 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10115)
+[2018-06-06 10:23:06 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10183)
+[2018-06-06 10:23:06 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10186)
+[2018-06-06 10:23:06 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10123)
+[2018-06-06 10:23:06 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10187)
+[2018-06-06 10:23:06 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10080)
+[2018-06-06 10:23:06 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10086)
+[2018-06-06 10:23:06 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10089)
+[2018-06-06 10:23:06 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10090)
+[2018-06-06 10:23:06 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10164)
+[2018-06-06 10:23:06 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10166)
+[2018-06-06 10:23:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10168)
+[2018-06-06 10:23:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10171)
+[2018-06-06 10:23:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:10174)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19778)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19780)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19784)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19741)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19748)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19750)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19754)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19755)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19756)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19744)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19760)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19761)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19762)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19763)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19766)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19773)
+[2018-06-06 18:24:38 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19775)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8322)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8331)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8326)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8327)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8264)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8265)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8266)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8267)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8334)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8335)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8336)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8340)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8299)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8250)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8315)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8330)
+[2018-06-07 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:8318)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21121)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21250)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21251)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21253)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21195)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21136)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21143)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21082)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21083)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21085)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21089)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21090)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21222)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21229)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21105)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21234)
+[2018-06-07 17:56:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:21239)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12884)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12885)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12888)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12889)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12893)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12894)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12896)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12900)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12903)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12908)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12909)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12911)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12914)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12916)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12919)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12921)
+[2018-06-08 08:44:21 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12923)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23808)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23746)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23811)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23730)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23882)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23884)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23896)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23898)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23836)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23901)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23785)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23787)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23855)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23731)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23862)
+[2018-06-08 09:52:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23735)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25398)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25352)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25297)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25301)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25303)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25304)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25306)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25309)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25311)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25386)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25391)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25393)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25395)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25334)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25336)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:25338)
+[2018-06-08 17:37:07 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:23736)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12868)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12873)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12879)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12881)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12882)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12885)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12887)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12889)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12891)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12893)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12895)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12898)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12899)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12901)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12902)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12904)
+[2018-06-08 17:59:44 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:12905)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13444)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13446)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13383)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13449)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13450)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13451)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13388)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13453)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13456)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13434)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13409)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13427)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13428)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13430)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13432)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13370)
+[2018-06-09 10:44:22 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:13438)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22544)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22548)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22486)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22551)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22488)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22490)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22491)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22492)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22554)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22558)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22560)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22566)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22556)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22557)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22511)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22569)
+[2018-06-10 12:59:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:22524)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7062)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7058)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7059)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7064)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7065)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7066)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7067)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7068)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7141)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7136)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7075)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7140)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7077)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7078)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7145)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7146)
+[2018-06-11 09:47:23 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:7091)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29826)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29933)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29915)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29797)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29793)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29796)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29798)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29799)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29800)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29802)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29867)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29805)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29871)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29809)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29791)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29930)
+[2018-06-11 17:41:34 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29886)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17122)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17157)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17097)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17099)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17100)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17166)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17169)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17170)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17076)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17077)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17078)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17079)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17080)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17081)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17176)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17174)
+[2018-06-11 18:16:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17172)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17793)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17846)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17798)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17847)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17808)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17848)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17855)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17841)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17777)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17779)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17844)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17782)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17783)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17784)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17787)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17853)
+[2018-06-12 08:50:49 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:17791)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28928)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28930)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28931)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28935)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28882)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28883)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28890)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28893)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28906)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28908)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28910)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28911)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28913)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28918)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28921)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28923)
+[2018-06-13 09:09:27 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28927)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29889)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29890)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29892)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29829)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29894)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29898)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29899)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29837)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29901)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29904)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29908)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29845)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29846)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29911)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29853)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29864)
+[2018-06-13 09:45:46 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:29883)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30922)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30927)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30929)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30931)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30932)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30933)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30937)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30876)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30941)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30943)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30948)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30949)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30951)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30952)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30953)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30954)
+[2018-06-13 10:26:25 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:30891)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:31979)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:32005)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:32006)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:32008)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:32010)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:32011)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:32003)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:31980)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:31981)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:31982)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:31983)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:31984)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:31987)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:31992)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:31993)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:31994)
+[2018-06-13 16:20:12 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:31999)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16064)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16065)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16067)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16068)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16071)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16072)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16073)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16077)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16080)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16039)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16040)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16044)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16046)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16052)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16058)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16059)
+[2018-06-13 18:44:03 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:16061)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19995)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19996)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:19999)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:20004)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:20008)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:20010)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:20012)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:20014)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:20015)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:20016)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:20018)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:20023)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:20024)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:20025)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:20027)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:20028)
+[2018-06-13 22:37:40 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:20029)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27564)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27568)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27569)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27571)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27572)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27573)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27576)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27585)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27586)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27588)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27590)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27595)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27598)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27601)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27603)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27606)
+[2018-06-13 23:50:00 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:27608)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28421)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28426)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28430)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28432)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28434)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28437)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28438)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28444)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28447)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28448)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28449)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28451)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28457)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28460)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28401)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28402)
+[2018-06-14 09:48:53 +0000] [7279] [CRITICAL] WORKER TIMEOUT (pid:28409)

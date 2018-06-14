@@ -92,3 +92,12 @@ h1 {
   font-size: 30px;
   text-align: center;
 }
+
+.circle {
+  width: 2ch;
+  height: 2ch;
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  border-radius: 50%;
+  background: #4679BD;
+}
