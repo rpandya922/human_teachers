@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pickle
 from environment import Environment
 import math
-
+np.set_printoptions(precision=2)
 file_name = "./data/environments.pkl"
 f = open(file_name, "rb")
 envs = pickle.load(f)
@@ -18,7 +18,6 @@ grid = env.grid
 color_idxs = {-1:0, -0.5:1, 0:2, 0.5:3, 1:4, 7:2}
 GOAL_VALUE = 7
 NUM_FEATURES = 5
-T = 100
 N_STATES = grid.shape[0] * grid.shape[1]
 gamma = 0.81
 threshold = 0.001
@@ -162,30 +161,32 @@ def get_optimal_policy(theta, grid):
     return policy
 
 demonstration = env.paths['path_2']
-demo_features = np.average([featurized(make_state(*s)) for s in demonstration])
+T = len(demonstration)
+demo_features = sum([featurized(make_state(*s)) for s in demonstration])
 #initialize
 s = make_state(env.goal[0], env.goal[1])
 z_s = 1
 theta = [0, 0, 0, 0, 0]
-finished = False
 alpha = 0.01
-epsilon = 0.001
 num_iters = 20
 for iteration in range(num_iters):
     mu = np.zeros((N_STATES, T))
-    current_policy = get_optimal_policy(theta, grid).flatten() # now N_STATESx1
+    i, j = demonstration[0]
+    s_idx = (i * grid.shape[1]) + j
+    mu[s_idx, 0] = 1
+    current_policy = get_optimal_policy(theta, grid)
     for s in range(N_STATES):
         for t in range(T-1):
             probs = []
             for pre_s in range(N_STATES):
                 pre_state = make_state(*state_idx_to_ij(pre_s))
-                optimal_a = current_policy[pre_s]
+                optimal_a = current_policy[pre_state[0], pre_state[1]]
                 probs.append(mu[pre_s, t] * get_transition_prob(pre_state, optimal_a, get_next_state(pre_state, optimal_a)))
             mu[s, t+1] = sum(probs)
     # state visitation frequencies
     svf = np.sum(mu, 1) # N_STATESx1
 
     gradient = demo_features - sum([svf[s] * featurized(make_state(*state_idx_to_ij(s))) for s in range(N_STATES)])
-    theta += alpha * gradient
+    theta -= alpha * gradient
     print theta
 
