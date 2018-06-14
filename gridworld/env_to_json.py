@@ -50,4 +50,4 @@ for idx in env_idxs:
     data['colors_' + str(idx)] = env.grid
     data['rewards_' + str(idx)] = grid_copy.tolist()
 with open('./data/test.txt', 'w') as f:
-    json.dump(data, f, sort_keys=True, indent=4, ensure_ascii=False)
+    json.dump(data, f, sort_keys=True, ensure_ascii=False)

@@ -79,6 +79,7 @@ def interactive():
     # initialize as all neutral
     grid = np.zeros((10,10))
     fig, ax = plt.subplots()
+
     start_loc = map(int, (raw_input("Start location: ") or "5 0").split(' '))
     goal_loc = map(int, (raw_input("End location: ") or "5 9").split(' '))
     def show_grid(grid, ax):

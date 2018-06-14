@@ -231,15 +231,18 @@ envs = pickle.load(f)
 f.close()
 
 # interesting_envs = [2, 3, 9, 10, 14, 15, 16, 17, 18]
-fig, axes = plt.subplots(nrows=5, ncols=4)
+fig, axes = plt.subplots(nrows=3, ncols=6)
 axes = np.array(axes).flatten()
-for i, idx in enumerate(envs['interesting_envs']):
+env_idxs = [2, 3, 10, 14, 15, 16, 18, 19, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+for i, idx in enumerate(env_idxs):
     ax = axes[i]
     env = envs['env_' + str(idx)]
     env.show_all_paths(ax)
+    ax.set_title("Grid " + str(i))# + " " + str(env.living_reward))
+    ax.get_yaxis().set_ticklabels([])
+    ax.get_xaxis().set_ticklabels([])
 plt.show()
 1/0
-
 # interesting_envs_idxs = [4,6,9,0,1,3,5,8,12,13]
 # fig, axes = plt.subplots(nrows=5, ncols=2)
 # axes = np.array(axes).flatten()

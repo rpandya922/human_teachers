@@ -47,10 +47,10 @@ class Environment():
         else:
             true_rewards = [-1, -0.5, 0, 0.5, 1]
 
-        def show_grid(grid, ax):
+        def show_grid(grid, ax, vmin=-1, vmax=1):
             ax.clear()
             cmap = plt.cm.gray
-            norm = plt.Normalize(-1, 1)
+            norm = plt.Normalize(vmin, vmax)
             rgba = cmap(norm(grid))
             # colors start and goal pixels individually
             rgba[start_loc[0], start_loc[1], :3] = 0, 0, 1
@@ -95,9 +95,9 @@ class Environment():
     def get_living_reward(self):
         return self.living_reward
     
-    def show_grid(self, ax):
+    def show_grid(self, ax, vmin=-1, vmax=1):
         cmap = plt.cm.gray
-        norm = plt.Normalize(-1, 1)
+        norm = plt.Normalize(vmin, vmax)
         rgba = cmap(norm(self.grid))
 
         # colors start and goal pixels individually
@@ -121,7 +121,8 @@ class Environment():
         else:
             noise = 0
         new_path = path + noise
-        ax.plot(new_path[:,1], new_path[:,0], c='C' + str(path_num), linewidth=4.5, label=label)
+        # ax.plot(new_path[:,1], new_path[:,0], c='C' + str(path_num), linewidth=4.5, label=label)
+        ax.plot(new_path[:,1], new_path[:,0], linewidth=4.5, label=label)
         # plt.pause(0.01)
 
     def show_all_paths(self, ax, show_legend=False):
