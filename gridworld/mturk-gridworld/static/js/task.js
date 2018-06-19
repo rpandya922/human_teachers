@@ -88,17 +88,8 @@ practice_rewards2= [[ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  0.,  0.,  0.],
 
 practice_grids = [practice_colors1, practice_colors2];
 practice_rewards = [practice_rewards1, practice_rewards2];
-
-//Make sure color and reward are shuffled the same way
-var shuffle_order = shuffle(_.range(grids.length));
-psiTurk.recordUnstructuredData("grid_order", shuffle_order);
-
-grids = match_shuffle(grids, shuffle_order);
-all_rewards = match_shuffle(all_rewards, shuffle_order);
-
-var TOTAL_MOVES = 50; //arbitrary for now
-var m = grids[0].length; // grid height
-var n = grids[0][0].length; // grid width
+var m = practice_grids[0].length;
+var n = practice_grids[0][0].length;
 
 var indexToij = function(idx) {
     // idx: 0-indexed cell number of m by n grid (left to right top to bottom)
@@ -226,14 +217,22 @@ var starts = [];
 var goals = [];
 var reward_parameters = [];
 var living_rewards = [];
+var TOTAL_MOVES = 50; //arbitrary for now
 
 function callback() {
+  //Make sure color and reward are shuffled the same way
+  var shuffle_order = shuffle(_.range(grids.length));
+  // var shuffle_order = _.range(grids.length);
+  psiTurk.recordUnstructuredData("grid_order", shuffle_order);
+
   grids = match_shuffle(grids, shuffle_order);
   all_rewards = match_shuffle(all_rewards, shuffle_order);
   starts = match_shuffle(starts, shuffle_order);
   goals = match_shuffle(goals, shuffle_order);
   reward_parameters = match_shuffle(reward_parameters, shuffle_order);
   living_rewards = match_shuffle(living_rewards, shuffle_order);
+
+  console.log(goals);
 }
 
 var xmlhttp = new XMLHttpRequest();
@@ -241,7 +240,7 @@ xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var obj = JSON.parse(this.responseText);
         colors_test = obj["colors_0"];
-        for (i = 0; i < 16; i++) {
+        for (i = 0; i < 15; i++) {
           grids.push(obj["colors_" + String(i)]);
           all_rewards.push(obj["rewards_" + String(i)]);
           starts.push(obj["start_" + String(i)]);
@@ -252,9 +251,7 @@ xmlhttp.onreadystatechange = function() {
         callback();
     }
 };
-// flask looks in templates/ by default, so test.txt lives there
-xmlhttp.open("GET", "test.txt", true);
-xmlhttp.send();
+
 /********************
 * HTML manipulation
 *
@@ -544,9 +541,6 @@ var Experiment = function() {
         return createLineElement(x, y, c, alpha);
     }
 
-    path = [start_loc];
-    prev_idx = start_loc;
-
     updateScore = function() {
         d3.select("#score").text(reward.toFixed(2));
     }
@@ -657,6 +651,9 @@ var Experiment = function() {
     }
 
     colorGridSquares();
+    path = [start_loc];
+    prev_idx = start_loc;
+  
     updateScore();
     updateMoves();
 
@@ -696,6 +693,11 @@ var currentview;
 $(window).load( function(){
     psiTurk.doInstructions(
         instructionPages, // a list of pages you want to display in sequence
-        function() { currentview = new Practice(); } // what you want to do when you are done with instructions
+        function() { 
+          // flask looks in templates/ by default, so test.txt lives there
+          xmlhttp.open("GET", "test.txt", true);
+          xmlhttp.send();
+          currentview = new Practice();
+        } // what you want to do when you are done with instructions
     );
 });
