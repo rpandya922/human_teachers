@@ -15,6 +15,7 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 var pages = [
     "instructions/instruct-1.html",
     "instructions/instruct-2.html",
+    "instructions/instruct-3.html",
     "practice.html",
     "demonstrations.html",
     "postquestionnaire.html"
@@ -24,7 +25,8 @@ psiTurk.preloadPages(pages);
 
 var instructionPages = [ // add as a list as many pages as you like
     "instructions/instruct-1.html",
-    "instructions/instruct-2.html"
+    "instructions/instruct-2.html",
+    "instructions/instruct-3.html"
 ];
 
 // orders a according to order
@@ -209,8 +211,7 @@ var numToColor = function(grid) {
         }
     }
 } 
-// code to read from json file for grids, instead of hard-coding at top
-// still needs to be implemented in Practice and Experiment
+
 var grids = [];
 var all_rewards = [];
 var starts = [];
@@ -219,6 +220,7 @@ var reward_parameters = [];
 var living_rewards = [];
 var TOTAL_MOVES = 50; //arbitrary for now
 
+// code to read from json file for grids, instead of hard-coding at top
 function callback() {
   //Make sure color and reward are shuffled the same way
   var shuffle_order = shuffle(_.range(grids.length));
@@ -231,8 +233,6 @@ function callback() {
   goals = match_shuffle(goals, shuffle_order);
   reward_parameters = match_shuffle(reward_parameters, shuffle_order);
   living_rewards = match_shuffle(living_rewards, shuffle_order);
-
-  console.log(goals);
 }
 
 var xmlhttp = new XMLHttpRequest();
@@ -240,13 +240,13 @@ xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var obj = JSON.parse(this.responseText);
         colors_test = obj["colors_0"];
-        for (i = 0; i < 15; i++) {
+        for (i = 0; i < 16; i++) {
           grids.push(obj["colors_" + String(i)]);
           all_rewards.push(obj["rewards_" + String(i)]);
           starts.push(obj["start_" + String(i)]);
           goals.push(obj["goal_" + String(i)]);
           reward_parameters.push(obj["reward_values_" + String(i)]);
-          living_rewards.push(obj["living_rewards_" + String(i)]);
+          living_rewards.push(obj["living_reward_" + String(i)]);
         }
         callback();
     }
@@ -433,7 +433,8 @@ var Practice = function() {
                   "could do the task even when the squares are arranged very differently.");
             // change instructions text on the page
             d3.select("#instructions").text("Show someone who can't see the score and doesn't " +
-                                            "know how much colors are worth the value of each color.");
+                                            "know how much colors are worth the value of each color " +
+                                            "and the living cost.");
         }
         // reset the view and recolor the grid with the environment
         clearAll();
@@ -494,6 +495,7 @@ var Experiment = function() {
         start_loc = ijToIndex(starts[grid_idx][0], starts[grid_idx][1]);
         goal_loc = ijToIndex(goals[grid_idx][0], goals[grid_idx][1]);
         reward_values = reward_parameters[grid_idx];
+        living_reward = living_rewards[grid_idx];
         numToColor(colors);
         for (var i = 0; i < colors.length; i++) {
             for (var j = 0; j < colors[0].length; j++) {
@@ -505,7 +507,8 @@ var Experiment = function() {
         document.getElementById("dark-gray-value").innerText = String(reward_values[1]) + ",";
         document.getElementById("gray-value").innerText = String(reward_values[2]) + ",";
         document.getElementById("light-gray-value").innerText = String(reward_values[3]) + ",";
-        document.getElementById("white-value").innerText = String(reward_values[4]);
+        document.getElementById("white-value").innerText = String(reward_values[4]) + ",";
+        document.getElementById("living-reward").innerText = -living_reward;
     }
 
     function createLineElement(x, y, length, angle) {
@@ -583,7 +586,7 @@ var Experiment = function() {
                 goalReached();
             }
             let [i, j] = indexToij(idx);
-            reward += rewards[i][j];
+            reward += rewards[i][j] + living_reward;
             moves_made += 1;
             if (updateMoves()) {
                 updateScore();
@@ -602,7 +605,7 @@ var Experiment = function() {
         if (!turns_finished) {
             let [i, j] = indexToij(prev_idx);
             path.push(prev_idx);
-            reward += rewards[i][j];
+            reward += rewards[i][j] + living_reward;
             moves_made += 1;
             updateMoves();
             updateScore();
@@ -631,6 +634,11 @@ var Experiment = function() {
         psiTurk.recordUnstructuredData('grid_' + grid_idx, rewards);
         psiTurk.recordUnstructuredData('path_' + grid_idx, path);
         psiTurk.recordUnstructuredData('reward_' + grid_idx, reward);
+        psiTurk.recordUnstructuredData('reward_values_' + grid_idx, reward_values);
+        psiTurk.recordUnstructuredData('living_reward_' + grid_idx, living_reward);
+        psiTurk.recordUnstructuredData('start_loc_' + grid_idx, start_loc);
+        psiTurk.recordUnstructuredData('goal_loc_' + grid_idx, goal_loc);
+
         
         grid_idx += 1;
         colorGridSquares();
@@ -647,6 +655,10 @@ var Experiment = function() {
         psiTurk.recordUnstructuredData('grid_' + grid_idx, rewards);
         psiTurk.recordUnstructuredData('path_' + grid_idx, path);
         psiTurk.recordUnstructuredData('reward_' + grid_idx, reward);
+        psiTurk.recordUnstructuredData('reward_values_' + grid_idx, reward_values);
+        psiTurk.recordUnstructuredData('living_reward_' + grid_idx, living_reward);
+        psiTurk.recordUnstructuredData('start_loc_' + grid_idx, start_loc);
+        psiTurk.recordUnstructuredData('goal_loc_' + grid_idx, goal_loc);
         currentview = new Questionnaire();
     }
 

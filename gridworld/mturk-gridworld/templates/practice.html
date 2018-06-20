@@ -1,9 +1,16 @@
 <div id="container-exp">
     <div>
         <div class="col-lg-12">
-          <h3 id="instructions">Get a high score before getting to the goal</h3>
-          <h3>Click on neighboring squares to move</h3>
-          <h3>Black=bad, White=good, Blue=start, Red=goal</h3>
+          <h4 id="instructions">Get a high score before getting to the goal</h4>
+          <h4>Click on neighboring squares to move</h4>
+          <!-- <h3>Black=bad, White=good, Blue=start, Red=goal</h3> -->
+          <h3 style="display: inline">Black: </h3><h3 style="display: inline" id="black-value">-1, </h3>
+          <h3 style="display: inline">Dark Gray: </h3><h3 style="display: inline" id="dark-gray-value">-0.5, </h3>
+          <h3 style="display: inline">Gray: </h3><h3 style="display: inline" id="gray-value">0, </h3>
+          <h3 style="display: inline">Light Gray: </h3><h3 style="display: inline" id="light-gray-value">0.5, </h3>
+          <h3 style="display: inline">White: </h3><h3 style="display: inline" id="white-value">1, </h3>
+          <h3 style="display: inline">Living Cost: </h3><h3 style="display: inline" id="living-reward">0</h3>
+          <p></p>
           <i>If lines appear incorrectly, click 'Clear All' to start this scenario over and don't scroll or resize this window.</i>
           <table style="width: 80ch">
             <tr>
