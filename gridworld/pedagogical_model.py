@@ -7,6 +7,7 @@ from tqdm import tqdm
 from environment import Environment
 from utils import *
 from dummy_file import compute
+np.random.seed(0)
 
 def featurize(grid, feature_idxs):
     """
@@ -64,6 +65,26 @@ def compute_trajectory_set_nx(grid, start, goal):
             for n in neighbors:
                 G.add_edge((i, j), n)
     return list(nx.all_simple_paths(G, start, goal))
+def partial_traj_to_features(partial, feature_map, grid, include_living_cost=False):
+    features = np.zeros(feature_map.shape[1])
+
+    i1, j1 = partial[0]
+    traj_len = 0
+    for (i2, j2) in partial[1:]:
+        if abs(i1 - i2) == 2 and j1 - j2 == 0:
+            # need to add feature for in between state
+            features += feature_map[ij_to_idx(int((i1+i2)/2), j1, grid.shape[0])]
+            traj_len += 1
+        elif i1 - i2 == 0 and abs(j1 - j2) == 2:
+            features += feature_map[ij_to_idx(i1, int((j1+j2)/2), grid.shape[0])]
+            traj_len += 1
+        features += feature_map[ij_to_idx(i2, j2, grid.shape[0])]
+        traj_len += 1
+        i1, j1 = i2, j2
+    if include_living_cost:
+        features = np.hstack((features, [0]))
+        features[-1] = traj_len
+    return features
 def partition_function(trajectory_set, theta, beta=1):
     """
     trajectory_set -DxN_FEAT - all featurized trajectories which are optimal for 
@@ -94,23 +115,27 @@ ground_truth = ground_truth / np.linalg.norm(ground_truth)
 # envs = pickle.load(f)['envs']
 # f.close()
 
-# env = envs[3]
+# env = envs[10]
 # grid = np.array(env.grid)
 # start = env.start
 # goal = env.goal
 # living_reward = env.living_reward
-grid = np.array([[0,  0,  0,  0],
-                 [0, -1, -1,  0],
-                 [0,  1,  1,  0],
-                 [0,  1,  1,  0]])
+grid = np.array([[0,  0,  0,  0,  0],
+                 [0, -1, -1,  0,  0],
+                 [0,  1,  1,  0,  0],
+                 [0,  1,  1,  0,  0],
+                 [0,  0,  0,  0,  0]])
 start = (0, 0)
 goal = (0, 3)
 living_reward = -1
 
 trajectory_set = compute_trajectory_set_nx(grid, start, goal)
+idxs_to_keep = np.random.choice(len(trajectory_set), size=1000)
+trajectory_set = np.array(trajectory_set)[idxs_to_keep]
 feature_map = featurize(grid, {-1:0, 1:1})
-traj_set_featurized = np.array([sum([feature_map[ij_to_idx(s[0], s[1], grid.shape[0])] for s in traj]) \
-                                                                          for traj in trajectory_set])
+# traj_set_featurized = np.array([sum([feature_map[ij_to_idx(s[0], s[1], grid.shape[0])] for s in traj]) \
+#                                                                           for traj in trajectory_set])
+traj_set_featurized = np.array([partial_traj_to_features(traj, feature_map, grid) for traj in trajectory_set])
 thetas = []
 for i in np.linspace(-1, 1, 5):
     for j in np.linspace(-1, 1, 5):
@@ -125,36 +150,9 @@ prior = np.ones(len(thetas)) / len(thetas)
 
 #####################################################################################
 # TIMING TESTING
-p_show = []
-for traj in tqdm(traj_set_featurized):
-    num, denom = compute(traj, traj_set_featurized, ground_truth, thetas)
-
-    # computes sum over all theta P(xi | theta)
-    p_obs_denom = np.sum(num / denom)
-    # computes P(xi | ground truth)
-    p_obs_num = prob_trajectory_given_theta(traj, traj_set_featurized, ground_truth)
-
-    # computes P(ground truth | xi)
-    p_obs = p_obs_num / p_obs_denom
-    p_show.append(p_obs)
-# computes P(xi | ground truth) for all xi
-p_show = p_show / np.sum(p_show)
-
-all_best = np.argwhere(p_show == np.amax(p_show)).flatten()
-# FINDING: np.exp is the real culprit: not sure how to do any faster
-#####################################################################################
-
-# uncomment for real running
-# ultimate goal: find most pedagogical example; highest P(xi|ground truth)
 # p_show = []
 # for traj in tqdm(traj_set_featurized):
-#     # xi = current traj, phi(xi) = featurized trajectory
-#     # computes exp(phi(xi)^T theta) for all thetas
-#     num = np.exp(thetas.dot(traj))
-
-#     # computes sum over all xi exp(phi(xi)^T theta) for all thetas
-#     denom = np.exp(traj_set_featurized.dot(thetas.T))
-#     denom = np.sum(denom, axis=0)
+#     num, denom = compute(traj, traj_set_featurized, ground_truth, thetas)
 
 #     # computes sum over all theta P(xi | theta)
 #     p_obs_denom = np.sum(num / denom)
@@ -168,12 +166,39 @@ all_best = np.argwhere(p_show == np.amax(p_show)).flatten()
 # p_show = p_show / np.sum(p_show)
 
 # all_best = np.argwhere(p_show == np.amax(p_show)).flatten()
+# FINDING: np.exp is the real culprit: not sure how to do any faster
+#####################################################################################
 
-# env = Environment(grid, start, goal, living_reward=living_reward)
-# fig, ax = plt.subplots()
-# for i, idx in enumerate(all_best):
-#     path = trajectory_set[idx]
-#     env.paths['path_' + str(i)] = path
-#     print traj_set_featurized[idx]
-# env.show_all_paths(ax)
-# # plt.show()
+# uncomment for real running
+# ultimate goal: find most pedagogical example; highest P(xi|ground truth)
+p_show = []
+for traj in tqdm(traj_set_featurized):
+    # xi = current traj, phi(xi) = featurized trajectory
+    # computes exp(phi(xi)^T theta) for all thetas
+    num = np.exp(thetas.dot(traj))
+
+    # computes sum over all xi exp(phi(xi)^T theta) for all thetas
+    denom = np.exp(traj_set_featurized.dot(thetas.T))
+    denom = np.sum(denom, axis=0)
+
+    # computes sum over all theta P(xi | theta)
+    p_obs_denom = np.sum(num / denom)
+    # computes P(xi | ground truth)
+    p_obs_num = prob_trajectory_given_theta(traj, traj_set_featurized, ground_truth)
+
+    # computes P(ground truth | xi)
+    p_obs = p_obs_num / p_obs_denom
+    p_show.append(p_obs)
+# computes P(xi | ground truth) for all xi
+p_show = p_show / np.sum(p_show)
+
+all_best = np.argwhere(p_show == np.amax(p_show)).flatten()
+
+env = Environment(grid, start, goal, living_reward=living_reward)
+fig, ax = plt.subplots()
+for i, idx in enumerate(all_best):
+    path = trajectory_set[idx]
+    env.paths['path_' + str(i)] = path
+    print traj_set_featurized[idx]
+env.show_all_paths(ax)
+plt.show()
