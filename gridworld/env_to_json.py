@@ -4,7 +4,7 @@ import json
 import readline
 import pickle
 import io
-
+# [2, 3, 10, 14, 15, 16, 19, 24, 25, 26, 27, 28, 29, 30, 31, 32]
 def prefilled_input(prompt, prefill=''):
    readline.set_startup_hook(lambda: readline.insert_text(prefill))
    try:
@@ -23,8 +23,9 @@ if env_idxs == "all":
 else:
     env_idxs = map(int, env_idxs.split(' '))
 data = {}
-for idx in env_idxs:
+for save_idx, idx in enumerate(env_idxs):
     env = envs['env_' + str(idx)]
+    env.grid = np.array(env.grid)
     try:
         true_rewards = env.true_rewards
     except:
@@ -47,7 +48,11 @@ for idx in env_idxs:
             elif env.grid[i][j] == 1:
                 # white
                 grid_copy[i][j] = true_rewards[4]
-    data['colors_' + str(idx)] = env.grid
-    data['rewards_' + str(idx)] = grid_copy.tolist()
+    data['colors_' + str(save_idx)] = env.grid.tolist()
+    data['rewards_' + str(save_idx)] = grid_copy.tolist()
+    data['start_' + str(save_idx)] = env.start
+    data['goal_' + str(save_idx)] = env.goal
+    data['reward_values_' + str(save_idx)] = true_rewards
+    data['living_reward_' + str(save_idx)] = env.living_reward
 with open('./data/test.txt', 'w') as f:
     json.dump(data, f, sort_keys=True, ensure_ascii=False)

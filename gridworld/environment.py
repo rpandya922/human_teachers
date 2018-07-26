@@ -107,8 +107,9 @@ class Environment():
 
         ax.imshow(rgba)
         ax.grid(axis='both', linestyle='-', color='k', linewidth=2)
-        ax.set_xticks(np.arange(-0.5, 10 + 0.5, 1))
-        ax.set_yticks(np.arange(-0.5, 10 + 0.5, 1))
+        width, height = np.array(self.grid).shape
+        ax.set_xticks(np.arange(-0.5, width + 0.5, 1))
+        ax.set_yticks(np.arange(-0.5, height + 0.5, 1))
         # plt.pause(0.01)
     
     def show_path(self, ax, path_num, noisy=False, label=""):
