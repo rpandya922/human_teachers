@@ -126,8 +126,8 @@ paths = {'path_2': [(5, 0), (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6), (5, 
 env.paths = paths
 fig, ax = plt.subplots()
 env.show_all_paths(ax)
-plt.show()
-1/0
+# plt.show()
+# 1/0
 demonstration = env.paths['path_2']
 # demonstration = [(5, 0), (4, 0), (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (4, 9), (5, 9)]
 demo_features = featurize(demonstration, env.grid, reward_idxs)
@@ -154,9 +154,9 @@ print np.amax(new_probs)
 fig1, ax1 = plt.subplots()
 ax1.hist(new_probs)
 
-fig2, ax2 = plt.subplots()
-env.show_grid(ax2)
-env.show_path(ax2, 0)
+# fig2, ax2 = plt.subplots()
+# env.show_grid(ax2)
+# env.show_path(ax2, 0)
 # plt.show()
 # 1/0
 for i, traj in enumerate(trajectories):
