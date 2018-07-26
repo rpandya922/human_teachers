@@ -10,7 +10,7 @@ f = open(file_name, "rb")
 envs = pickle.load(f)
 f.close()
 
-env = envs['env_2']
+env = envs['env_14']
 env.grid = np.array(env.grid)
 grid = env.grid
 
@@ -23,8 +23,8 @@ gamma = 0.81
 threshold = 0.001
 
 def state_idx_to_ij(idx):
-    i = math.floor(idx / grid.shape[0]);
-    j = idx % grid.shape[1];
+    i = math.floor(idx / grid.shape[0])
+    j = idx % grid.shape[1]
     return (i, j)
 def make_state(i, j): return (int(i), int(j), color_idxs[grid[int(i), int(j)]])
 def get_neighboring_action_state_pairs(state):
@@ -161,6 +161,9 @@ def get_optimal_policy(theta, grid):
     return policy
 
 demonstration = env.paths['path_2']
+fig, ax = plt.subplots()
+env.show_all_paths(ax)
+plt.pause(0.01)
 T = len(demonstration)
 demo_features = sum([featurized(make_state(*s)) for s in demonstration])
 #initialize
@@ -181,12 +184,12 @@ for iteration in range(num_iters):
             for pre_s in range(N_STATES):
                 pre_state = make_state(*state_idx_to_ij(pre_s))
                 optimal_a = current_policy[pre_state[0], pre_state[1]]
-                probs.append(mu[pre_s, t] * get_transition_prob(pre_state, optimal_a, get_next_state(pre_state, optimal_a)))
+                probs.append(mu[pre_s, t] * get_transition_prob(pre_state, optimal_a, make_state(*state_idx_to_ij(s))))
             mu[s, t+1] = sum(probs)
     # state visitation frequencies
     svf = np.sum(mu, 1) # N_STATESx1
 
     gradient = demo_features - sum([svf[s] * featurized(make_state(*state_idx_to_ij(s))) for s in range(N_STATES)])
-    theta -= alpha * gradient
+    theta += alpha * gradient
     print theta
-
+plt.show()
