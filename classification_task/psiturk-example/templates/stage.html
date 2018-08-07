@@ -1,0 +1,229 @@
+<div id="container-exp">
+
+	<div id="trial">
+		<p>Please select a height and width for the body of each bug.</p>
+		
+		<!--<div id="stim"></div>-->
+		<div id="query"></div>
+	</div>
+	
+	<style>
+	div.vespula {
+		position:absolute;
+		left: 250px;
+		top: 350px;
+	}
+
+	div.weevil {
+		position:absolute;
+		left: 750px;
+		top: 350px;
+	}
+	
+	</style>
+
+	<body>
+	<div class="vespula" id = "one">
+		Bug one is a weevil:
+	</div>
+
+	<div class="weevil" id = "two">
+		Bug two is a weevil:
+	</div>
+	</body>
+
+
+	Bug one width:
+	<input type="range" oninput="changeWidth1(this.value)">
+
+	Bug one height:
+	<input type="range" oninput="changeHeight1(this.value)"> 
+	
+	<div id="body1"></div>
+	<style type="text/css">
+	#body1 {
+	    background: black;
+	    border-radius: 100px 100px 100px 100px;
+	    content: "";
+	    height: 50px;
+	    position: absolute;
+	    left: 250px;
+		top: 450px;
+	    width: 50px;
+
+	}
+	</style>
+
+	<div id="head1"></div>
+	<style type="text/css">
+	#head1 {
+	    background: gray;
+	    border-radius: 100px 100px 100px 100px;
+	    content: "";
+	    height: 25px;
+	    position: absolute;
+	    left: 275px;
+		top: 435px;
+	    width: 25px;
+
+	}
+	</style>
+	
+	<p id="width1"> 
+	</p>
+	<p id="height1"> 
+	</p>
+
+	<script>
+	function changeWidth1(val) {
+	    element = document.getElementById("body1");
+	    w2 = document.getElementById("head1");
+	    if (val == "0") {
+	    	element.style.width = "1px"
+	    	w2.style.left = "226px";
+	    	document.getElementById("width1").innerHTML = "Current bug one width: "+ (+val + 1);
+	    }
+	    else {
+	    	element.style.width = val + "px";
+	    	w2.style.left = (+val + 225) + "px";
+	    	document.getElementById("width1").innerHTML = "Current bug one width: "+ val;
+	    }
+
+	    if (document.getElementById("body1").offsetHeight > document.getElementById("body1").offsetWidth) {
+			document.getElementById("one").innerHTML = "Bug one is a vespula:"
+		}
+		else {
+			document.getElementById("one").innerHTML = "Bug one is a weevil:"
+		}  
+	}
+
+	function changeHeight1(val) {
+	    element = document.getElementById("body1");
+	    if (val == "0") {
+	    	element.style.height = "1px"
+	    	document.getElementById("height1").innerHTML = "Current bug one height: "+ (+val + 1);
+	    }
+	    else {
+	    	element.style.height = val + "px";
+	    	document.getElementById("height1").innerHTML = "Current bug one height: "+ val;
+	    }
+	    
+	    if (document.getElementById("body1").offsetHeight > document.getElementById("body1").offsetWidth) {
+		document.getElementById("one").innerHTML = "Bug one is a vespula:"
+		}
+		else {
+			document.getElementById("one").innerHTML = "Bug one is a weevil:"
+		}
+	}
+
+	
+	 
+	</script>
+
+
+	Bug two width:
+	<input type="range" oninput="changeWidth2(this.value)">
+
+	Bug two height:
+	<input type="range" oninput="changeHeight2(this.value)"> 
+
+	<div id="body2"></div>
+	<style type="text/css">
+	#body2 {
+	    background: black;
+	    border-radius: 100px 100px 100px 100px;
+	    content: "";
+	    height: 50px;
+	    position: absolute;
+	    left: 750px;
+		top: 450px;
+	    width: 50px;
+
+	}
+
+	</style>
+	<div id="head2"></div>
+	<style type="text/css">
+	#head2 {
+	    background: gray;
+	    border-radius: 100px 100px 100px 100px;
+	    content: "";
+	    height: 25px;
+	    position: absolute;
+	    left: 775px;
+		top: 435px;
+	    width: 25px;
+
+	}
+	</style>
+
+	
+	
+	<p id="width2"> 
+	</p>
+	<p id="height2"> 
+	</p>
+
+	<script>
+	function changeWidth2(val) {
+	    element2 = document.getElementById("body2");
+	    w2 = document.getElementById("head2");
+	    if (val == "0") {
+	    	element2.style.width = "1px";
+	    	w2.style.left = "726px"
+	    	document.getElementById("width2").innerHTML = "Current bug two width: "+ (+val + 1);
+	    }
+	    else {
+	    	element2.style.width = val + "px";
+	    	w2.style.left = (+val + 725) + "px";
+	    	document.getElementById("width2").innerHTML = "Current bug two width: "+ val;
+	    }
+
+	     if (document.getElementById("body2").offsetHeight > document.getElementById("body2").offsetWidth) {
+			document.getElementById("two").innerHTML = "Bug two is a vespula:"
+		}
+		else {
+			document.getElementById("two").innerHTML = "Bug two is a weevil:"
+		}
+	    
+	    
+	}
+
+	function changeHeight2(val) {
+	    element2 = document.getElementById("body2");
+	    if (val == "0") {
+	    	element2.style.height = "1px"
+	    	document.getElementById("height2").innerHTML = "Current bug two height: "+ (+val + 1);
+	    }
+	    else {
+	    	element2.style.height = val + "px";
+	    	document.getElementById("height2").innerHTML = "Current bug two height: "+ val;
+	    }
+	    
+	    if (document.getElementById("body2").offsetHeight > document.getElementById("body2").offsetWidth) {
+			document.getElementById("two").innerHTML = "Bug two is a vespula:"
+		}
+		else {
+			document.getElementById("two").innerHTML = "Bug two is a weevil:"
+		}
+	 }
+
+	
+	</script>
+		
+
+	<script>
+	el1 = document.getElementById("body_vespula");
+	el2 = document.getElementById("body_weevil");
+	h1 = el1.style.height;
+	w1 = el1.style.width;
+	h2 = el2.style.height;
+	w2 = el2.style.width;
+	</script>
+	
+	<button onclick="recordData()">Finish experiment</button>
+
+	
+	
+
+</div>

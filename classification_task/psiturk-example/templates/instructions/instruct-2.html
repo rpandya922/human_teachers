@@ -1,0 +1,142 @@
+<div id="container-instructions">
+
+    <h1>Instructions</h1>
+
+    <hr />
+
+    <div class="instructions well">
+
+        <p>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br />
+        </p>
+
+        <p>
+        </p>
+
+    <body>
+        <div class = "vespula">
+            This is a vespula. The height of its body<br /> is always greater than the width.
+        </div>
+
+        <div class = "weevil">
+            This is a weevil. The width of its body<br /> is always greater than or equal to its height.
+        </div>
+
+        <div class = "instruct">
+            The height and width of both bugs ranges from 1 mm to 100 mm.
+        </div>
+
+        <div id="body_vespula"></div>
+        <style type="text/css">
+        #body_vespula {
+            background: black;
+            border-radius: 100px 100px 100px 100px;
+            content: "";
+            height: 75px;
+            position: absolute;
+            left: 250px;
+            top: 310px;
+            width: 25px;
+
+        }
+        </style>
+
+        <div id="head_vespula"></div>
+        <style type="text/css">
+        #head_vespula {
+            background: gray;
+            border-radius: 100px 100px 100px 100px;
+            content: "";
+            height: 25px;
+            position: absolute;
+            left: 250px;
+            top: 290px;
+            width: 25px;
+
+        }
+        </style>
+
+        <div id="head_weevil"></div>
+        <style type="text/css">
+        #head_weevil {
+            background: gray;
+            border-radius: 100px 100px 100px 100px;
+            content: "";
+            height: 25px;
+            position: absolute;
+            left: 775px;
+            top: 317px;
+            width: 25px;
+
+        }
+        </style>
+
+        <div id="body_weevil"></div>
+        
+        <style type="text/css">
+        #body_weevil {
+            background: black;
+            border-radius: 100px 100px 100px 100px;
+            content: "";
+            height: 25px;
+            position: absolute;
+            left: 750px;
+            top: 340px;
+            width: 75px;
+
+        }
+        </style>
+    </body>
+
+        <script type="text/javascript">
+        //console.log(psiTurk.getInstructionIndicator())
+        </script>
+
+    </div>
+
+    <hr />
+
+    <style>
+        div.vespula {
+            position:absolute;
+            left: 100px;
+            top: 200px;
+        }
+
+        div.weevil {
+            position:absolute;
+            left: 650px;
+            top: 200px;
+        }
+
+        div.instruct {
+            position:absolute;
+            left: 325px;
+            top: 150px;
+        }
+    
+    </style>
+
+    
+
+    
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+                <button type="button" id="prev" value="prev" class="btn btn-primary btn-lg previous">
+                <span class="glyphicon glyphicon-arrow-left"></span> Previous
+                </button>
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue">
+                Next <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
